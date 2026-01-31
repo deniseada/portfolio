@@ -1,8 +1,11 @@
 .card {
-  background-color: #7a8fa3;
+  background-color: #6d8296;
   overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
 }
 
 .cardContainer {
@@ -14,6 +17,41 @@
   padding: 1.5rem;
 }
 
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b8b8b8;
+  position: relative;
+}
+
+.categoryOverlay {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #b8b8b8;
+}
+
+.categoryText {
+  color: white;
+  font-size: 1.25rem;
+  font-weight: 500;
+  text-align: center;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.checkerboard {
+  width: 100%;
+  height: 100%;
+  background: repeating-conic-gradient(#e0e0e0 0% 25%, #f5f5f5 0% 50%) 0 0 /
+    20px 20px;
+}
+
 .title {
   padding: 1.5rem;
   text-align: center;
@@ -21,13 +59,4 @@
   font-size: 1.25rem;
   font-weight: 600;
   margin: 0;
-}
-
-.imageContainer {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: white;
 }

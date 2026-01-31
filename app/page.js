@@ -11,7 +11,6 @@ export default function Home() {
       <main className={styles.main}>
         <h1 className={styles.title}>Welcome to My Portfolio</h1>
       </main>
-      <Footer />
     </div>
   );
 }
