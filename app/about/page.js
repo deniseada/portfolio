@@ -8,10 +8,7 @@ export default function About() {
   return (
     <div className={styles.page}>
       <NavBar />
-      <main className={styles.main}>
-        <h1 className={styles.title}>About</h1>
-        <p>Learn more about me and my experience.</p>
-      </main>
+      <main className={styles.main}></main>
       <Footer />
     </div>
   );

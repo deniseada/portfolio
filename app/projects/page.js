@@ -14,14 +14,14 @@ export default function Projects() {
         <h1 className={styles.pageTitle}>PROJECTS</h1>
         <ProjectNav />
         <div className={styles.projectGrid}>
-          <ProjectCard title="Title" category="Web Development UX/UI" />
-          <ProjectCard title="Title" />
-          <ProjectCard title="Title" category="Web Development UX/UI" />
-          <ProjectCard title="Title" />
-          <ProjectCard title="Title" category="Web Development UX/UI" />
-          <ProjectCard title="Title" />
-          <ProjectCard title="Title" category="Web Development UX/UI" />
-          <ProjectCard title="Title" />
+          <ProjectCard title="Title" flippedText="Web Development UX/UI" />
+          <ProjectCard title="Title" flippedText="Web Development UX/UI" />
+          <ProjectCard title="Title" flippedText="Web Development UX/UI" />
+          <ProjectCard title="Title" flippedText="Web Development UX/UI" />
+          <ProjectCard title="Title" flippedText="Web Development UX/UI" />
+          <ProjectCard title="Title" flippedText="Web Development UX/UI" />
+          <ProjectCard title="Title" flippedText="Web Development UX/UI" />
+          <ProjectCard title="Title" flippedText="Web Development UX/UI" />
         </div>
       </main>
       <Footer />
