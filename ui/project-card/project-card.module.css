@@ -1,114 +1,34 @@
 .card {
-  background-color: #6d8296;
-  overflow: hidden;
-  transition: transform 0.3s ease;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.cardContainer {
-  width: 100%;
-  aspect-ratio: 1;
+  background: var(--color-card-right);
+  background-size: cover;
+  background-position: center;
+  min-height: 14rem;
+  padding: 1.1rem;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1.5rem;
-}
-
-.imageContainer {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  background-color: #b8b8b8;
-}
-
-.cardImage {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.checkerboard {
-  width: 100%;
-  height: 100%;
-  background: repeating-conic-gradient(#e0e0e0 0% 25%, #f5f5f5 0% 50%) 0 0 /
-    20px 20px;
-}
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(128, 128, 128, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 2rem;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-.imageContainer:hover .overlay {
-  opacity: 1;
-}
-
-.overlayText {
-  color: white;
-  font-size: 1.25rem;
-  font-weight: 500;
-  text-align: center;
-  line-height: 1.5;
-  margin: 0;
-}
-
-.flippedText {
-  color: white;
-  font-size: 1.25rem;
-  font-weight: 500;
-  text-align: center;
-  line-height: 1.5;
-  margin: 0;
-  position: relative;
-  z-index: 1;
-}
-
-.categoryOverlay {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #b8b8b8;
-}
-
-.categoryText {
-  color: white;
-  font-size: 1.25rem;
-  font-weight: 500;
-  text-align: center;
-  line-height: 1.5;
-  margin: 0;
-}
-
-.checkerboard {
-  width: 100%;
-  height: 100%;
-  background: repeating-conic-gradient(#e0e0e0 0% 25%, #f5f5f5 0% 50%) 0 0 /
-    20px 20px;
+  flex-direction: column;
+  justify-content: flex-start;
 }
 
 .title {
-  padding: 1.5rem;
-  text-align: center;
-  color: white;
-  font-size: 1.25rem;
-  font-weight: 600;
+  font-size: 1.05rem;
+  letter-spacing: 0.08rem;
+  color: var(--color-ink);
   margin: 0;
+}
+
+.cardBody {
+  margin-top: auto;
+  display: flex;
+  gap: 0.5rem;
+  align-items: flex-start;
+  color: var(--color-ink);
+  font-size: 0.85rem;
+  line-height: 1.6;
+}
+
+.cardRule {
+  display: inline-block;
+  width: 3px;
+  height: 2.6rem;
+  background: var(--color-ink);
 }

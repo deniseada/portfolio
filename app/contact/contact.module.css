@@ -1,0 +1,33 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-cream);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 140px 0 3rem;
+  flex: 1;
+}
+
+.pageTitle {
+  color: var(--color-ink);
+  font-size: 3.4rem;
+  font-weight: 700;
+  letter-spacing: 0.08rem;
+  margin: 1.5rem 0 2.5rem;
+  text-align: center;
+  max-width: 79.5rem;
+  width: 100%;
+  padding: 0 1.25rem;
+}
+
+@media (max-width: 768px) {
+  .pageTitle {
+    font-size: 2.6rem;
+  }
+}

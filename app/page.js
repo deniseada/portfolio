@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import NavBar from "../ui/nav-bar/page";
 import Footer from "../ui/footer/page";
 import FeatureCard from "../ui/feature-card/page";
@@ -69,9 +70,9 @@ export default function Home() {
             />
           </div>
           <div className={styles.featuredFooter}>
-            <button className={styles.moreProjects} type="button">
+            <Link className={styles.moreProjects} href="/projects">
               VIEW MORE PROJECTS &gt;
-            </button>
+            </Link>
           </div>
         </section>
       </main>

@@ -45,7 +45,6 @@ export default function Footer() {
           <div className={styles.logoBox}>
             <span className={styles.logoText}>LOGO</span>
           </div>
-          <p className={styles.copyright}>Denise Aquino @ 2026</p>
         </div>
       </div>
     </footer>
