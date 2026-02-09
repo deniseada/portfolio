@@ -6,7 +6,7 @@ import styles from "./project-nav.module.css";
 export default function ProjectNav() {
   const [activeCategory, setActiveCategory] = useState("All");
 
-  const categories = ["All", "UX/UI", "Web Development", "Graphic Design"];
+  const categories = ["All", "Web Development", "UX/UI", "Graphic Design"];
 
   return (
     <nav className={styles.projectNav}>

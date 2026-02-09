@@ -4,17 +4,35 @@
   margin: 0;
 }
 
+:root {
+  --color-white: #fff;
+  --color-cream: #f4f1ea;
+  --color-ink: #3b352a;
+  --color-slate: #1f2430;
+  --color-brown: #2f2a21;
+  --color-offwhite: #f5f2ea;
+  --color-card: #f0ebe2;
+  --color-card-light: #f4efe6;
+  --color-card-right: #c7c3bd;
+  --color-footer: #3d5368;
+  --color-logo: #e8e8e8;
+}
+
 html,
 body {
   font-family: var(--font-jost), sans-serif;
 }
 
 body {
-  color: #333;
-  background-color: #fff;
+  color: var(--color-ink);
+  background-color: var(--color-white);
 }
 
 a {
   color: inherit;
   text-decoration: none;
+}
+
+.font-playfair {
+  font-family: var(--font-playfair), serif;
 }

@@ -1,6 +1,6 @@
 .footer {
-  background-color: #3d5368;
-  color: white;
+  background-color: var(--color-footer);
+  color: var(--color-white);
   padding: 3rem 2rem;
   width: 100vw;
   bottom: 0;
@@ -30,7 +30,7 @@
 }
 
 .link {
-  color: white;
+  color: var(--color-white);
   text-decoration: none;
   font-size: 1rem;
   transition: opacity 0.3s ease;
@@ -48,7 +48,7 @@
 }
 
 .logoBox {
-  background-color: #e8e8e8;
+  background-color: var(--color-logo);
   padding: 2rem 3rem;
   border-radius: 8px;
   display: flex;
@@ -57,14 +57,14 @@
 }
 
 .logoText {
-  color: black;
+  color: var(--color-ink);
   font-size: 1.5rem;
   font-weight: 700;
   letter-spacing: 0.1em;
 }
 
 .copyright {
-  color: white;
+  color: var(--color-white);
   font-size: 1rem;
   margin: 0;
 }

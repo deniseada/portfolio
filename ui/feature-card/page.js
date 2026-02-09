@@ -25,7 +25,7 @@ export default function FeatureCard({
           {buttonText}
         </button>
       </div>
-      <div className={styles.heroRight} aria-hidden="true" />
+      <div className={styles.img} aria-hidden="true" />
     </section>
   );
 }

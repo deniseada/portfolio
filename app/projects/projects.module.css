@@ -2,7 +2,7 @@
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: #f4f1ea;
+  background-color: var(--color-cream);
 }
 
 .main {
@@ -10,16 +10,16 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding: 140px 0 2rem;
+  padding: 140px 0 4rem;
   flex: 1;
 }
 
 .pageTitle {
-  color: #a8414a;
-  font-size: 4rem;
+  color: var(--color-ink);
+  font-size: 3.4rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
-  margin: 2rem 0;
+  letter-spacing: 0.08rem;
+  margin: 2rem 0 3.5rem;
   text-align: center;
   max-width: 79.5rem;
   width: 100%;
@@ -28,12 +28,49 @@
 
 .projectGrid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
   max-width: 79.5rem;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: 0;
   padding: 0 2rem;
+}
+
+.projectCard {
+  background: var(--color-card-right);
+  min-height: 18rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.projectWide {
+  grid-column: span 2;
+  min-height: 20rem;
+}
+
+.cardTitle {
+  font-size: 1.2rem;
+  letter-spacing: 0.08rem;
+  color: var(--color-ink);
+}
+
+.cardBody {
+  margin-top: auto;
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+  color: var(--color-ink);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+.cardRule {
+  display: inline-block;
+  width: 3px;
+  height: 3.4rem;
+  background: var(--color-ink);
 }
 
 @media (max-width: 768px) {
@@ -41,7 +78,11 @@
     grid-template-columns: 1fr;
   }
 
+  .projectWide {
+    grid-column: span 1;
+  }
+
   .pageTitle {
-    font-size: 3rem;
+    font-size: 2.6rem;
   }
 }

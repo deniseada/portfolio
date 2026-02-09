@@ -1,10 +1,16 @@
-import { Jost } from "next/font/google";
+import { Jost, Playfair_Display } from "next/font/google";
 import "./globals.css";
 
 const jost = Jost({
   variable: "--font-jost",
   subsets: ["latin"],
   weight: ["300", "400", "500", "600", "700"],
+});
+
+const playfair = Playfair_Display({
+  variable: "--font-playfair",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata = {
@@ -15,7 +21,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={jost.variable}>{children}</body>
+      <body className={`${jost.variable} ${playfair.variable}`}>
+        {children}
+      </body>
     </html>
   );
 }

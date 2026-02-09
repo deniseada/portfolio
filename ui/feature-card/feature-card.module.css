@@ -5,7 +5,7 @@
   min-height: 22rem;
   overflow: hidden;
   box-shadow: 0 22px 50px rgba(18, 14, 9, 0.18);
-  background-color: #f0ebe2;
+  background-color: var(--color-card);
 }
 
 .flipped .heroLeft {
@@ -20,36 +20,36 @@
   flex: 1;
   min-width: 0;
   padding: 2.75rem 3rem;
-  background: #f4efe6;
+  background: var(--color-card-light);
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 1.25rem;
 }
 
-.heroRight {
+.img {
   flex: 1;
   min-width: 0;
-  background: #c7c3bd;
+  background: var(--color-card-right);
 }
 
 .eyebrow {
   font-size: 1.5rem;
   letter-spacing: 0.12rem;
   font-weight: 600;
-  color: #3a332a;
+  color: var(--color-ink);
 }
 
 .heroTitle {
   font-size: 1.1rem;
   font-weight: 600;
-  color: #2d3748;
+  color: var(--color-ink);
 }
 
 .heroBody {
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #4a453f;
+  color: var(--color-ink);
   max-width: 30rem;
 }
 
@@ -59,8 +59,8 @@
   padding: 0.85rem 2.2rem;
   border-radius: 0;
   border: none;
-  background: #2f2a21;
-  color: #f7f2e7;
+  background: var(--color-brown);
+  color: var(--color-offwhite);
   font-weight: 600;
   font-size: 1rem;
   cursor: pointer;

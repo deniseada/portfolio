@@ -6,13 +6,13 @@
   top: 3rem;
   left: 50%;
   transform: translateX(-50%);
-  width: 79.5rem;
+  width: min(92vw, 84rem);
   border-radius: 25px;
   z-index: 100;
 }
 
 .navContainer {
-  max-width: 79.5rem;
+  max-width: min(92vw, 84rem);
   margin: 0 auto;
   padding: 0 2rem;
   justify-content: flex-end;
