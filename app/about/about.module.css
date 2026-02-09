@@ -1,0 +1,375 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-cream);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 150px 0 4rem;
+  flex: 1;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.sectionInner {
+  width: min(92vw, 72rem);
+}
+
+.hero {
+  padding: 2.5rem 0 3.5rem;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 2.6rem;
+  letter-spacing: 0.16rem;
+  color: var(--color-ink);
+  margin-bottom: 2.5rem;
+}
+
+.heroGrid {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.heroImage {
+  min-height: 14rem;
+  background: var(--color-card-right);
+  box-shadow: 0 16px 30px rgba(20, 16, 11, 0.14);
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.heroName {
+  font-size: 2.2rem;
+  letter-spacing: 0.08rem;
+  color: var(--color-ink);
+}
+
+.heroRole {
+  font-size: 0.95rem;
+  letter-spacing: 0.08rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.heroBody {
+  font-size: 0.98rem;
+  line-height: 1.7;
+  color: var(--color-ink);
+}
+
+.heroLinks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  padding-top: 0.4rem;
+}
+
+.heroLink {
+  display: inline-flex;
+  gap: 0.6rem;
+  align-items: center;
+  font-size: 0.95rem;
+  color: var(--color-slate);
+  font-weight: 600;
+}
+
+.linkIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 1.5rem;
+  border: 1px solid var(--color-slate);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.skills {
+  background: var(--color-brown);
+  color: var(--color-offwhite);
+  padding: 3rem 0 3.5rem;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.sectionTitle {
+  font-size: 1.9rem;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+}
+
+.sectionSubtitle {
+  font-size: 0.95rem;
+  max-width: 36rem;
+  line-height: 1.6;
+  color: inherit;
+}
+
+.skillGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.1rem;
+}
+
+.skillCard {
+  background: var(--color-offwhite);
+  color: var(--color-ink);
+  padding: 1.5rem 1.4rem;
+  min-height: 10rem;
+  box-shadow: 0 14px 26px rgba(17, 14, 10, 0.2);
+}
+
+.skillTitle {
+  font-size: 1rem;
+  letter-spacing: 0.08rem;
+  font-weight: 700;
+  margin-bottom: 0.8rem;
+}
+
+.skillList {
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.92rem;
+}
+
+.experience {
+  padding: 3.5rem 0 2.5rem;
+}
+
+.timeline {
+  display: grid;
+  gap: 2rem;
+}
+
+.roleCard {
+  background: var(--color-card-light);
+  padding: 1.8rem 1.9rem;
+  border-left: 4px solid var(--color-brown);
+  box-shadow: 0 14px 28px rgba(20, 16, 11, 0.12);
+}
+
+.roleHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-bottom: 0.8rem;
+}
+
+.roleTitle {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.roleMeta {
+  font-size: 0.9rem;
+  color: var(--color-slate);
+  font-weight: 600;
+}
+
+.roleList {
+  display: grid;
+  gap: 0.55rem;
+  font-size: 0.92rem;
+  color: var(--color-ink);
+  line-height: 1.6;
+  padding-left: 1.1rem;
+}
+
+.education {
+  padding: 2.5rem 0 3.2rem;
+}
+
+.eduGrid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.eduCard {
+  background: var(--color-card);
+  padding: 1.6rem 1.7rem;
+  box-shadow: 0 12px 24px rgba(20, 16, 11, 0.12);
+}
+
+.eduTitle {
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--color-ink);
+}
+
+.eduMeta {
+  font-size: 0.88rem;
+  color: var(--color-slate);
+  font-weight: 600;
+  margin: 0.35rem 0 0.75rem;
+}
+
+.eduList {
+  display: grid;
+  gap: 0.45rem;
+  font-size: 0.92rem;
+  color: var(--color-ink);
+  line-height: 1.6;
+  padding-left: 1.1rem;
+}
+
+.hobbies {
+  padding: 1.5rem 0 3.5rem;
+}
+
+.hobbyIconRow {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hobbyIconCard {
+  background: var(--color-card-light);
+  min-height: 8.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  letter-spacing: 0.04rem;
+}
+
+.hobbyImageRow {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2.2rem;
+}
+
+.hobbyImageCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.9rem;
+  font-weight: 700;
+  color: var(--color-ink);
+  letter-spacing: 0.04rem;
+}
+
+.hobbyImage {
+  width: 100%;
+  height: 11rem;
+  background: var(--color-brown);
+  position: relative;
+}
+
+.hobbyImage::before,
+.hobbyImage::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-top: 0.6rem solid transparent;
+  border-bottom: 0.6rem solid transparent;
+}
+
+.hobbyImage::before {
+  left: -0.4rem;
+  border-right: 0.6rem solid var(--color-cream);
+}
+
+.hobbyImage::after {
+  right: -0.4rem;
+  border-left: 0.6rem solid var(--color-cream);
+}
+
+.hobbyGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.5rem;
+}
+
+.hobbyCard {
+  background: var(--color-card-right);
+  min-height: 11rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1.4rem;
+  color: var(--color-ink);
+  font-weight: 700;
+  letter-spacing: 0.04rem;
+}
+
+.hobbyIcon {
+  width: 2.2rem;
+  height: 2.2rem;
+  border: 2px solid var(--color-ink);
+}
+
+.hobbyBlock {
+  width: 100%;
+  height: 8.5rem;
+  background: #bdb9b2;
+  margin-bottom: 1rem;
+}
+
+@media (max-width: 980px) {
+  .heroGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .skillGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hobbyIconRow {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hobbyImageRow {
+    grid-template-columns: 1fr;
+  }
+
+  .hobbyGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .main {
+    padding-top: 130px;
+  }
+
+  .skillGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .hobbyIconRow {
+    grid-template-columns: 1fr;
+  }
+}
