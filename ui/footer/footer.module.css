@@ -1,7 +1,7 @@
 .footer {
   background-color: var(--color-footer);
   color: var(--color-white);
-  padding: 1.75rem 2rem;
+  padding: 1.75rem 5rem;
   width: 99vw;
   bottom: 0;
   left: 0;
@@ -12,14 +12,15 @@
   max-width: 1400px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 2.5rem;
+  grid-template-columns: max-content max-content 1fr;
+  column-gap: 10rem;
 }
 
 .section {
   display: flex;
   flex-direction: column;
   gap: 0.65rem;
+  justify-self: start;
 }
 
 .heading {
@@ -43,14 +44,13 @@
 .logoSection {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
-  gap: 0.6rem;
+  justify-self: end;
+  align-items: center;
 }
 
 .logoBox {
   background-color: var(--color-logo);
   padding: 1.2rem 2.2rem;
-  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;

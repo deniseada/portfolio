@@ -1,9 +1,16 @@
 import styles from "./project-card.module.css";
 
-export default function ProjectCard({ title, body, image, className }) {
+export default function ProjectCard({
+  title,
+  body,
+  image,
+  className,
+  category,
+}) {
   return (
     <article
       className={`${styles.card} ${className || ""}`}
+      data-category={category}
       style={image ? { backgroundImage: `url(${image})` } : undefined}
     >
       <h3 className={styles.title}>{title}</h3>

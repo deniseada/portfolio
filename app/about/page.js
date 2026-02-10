@@ -2,6 +2,7 @@
 
 import NavBar from "../../ui/nav-bar/page";
 import Footer from "../../ui/footer/page";
+import HobbiesCard from "../../ui/hobbies-card/page";
 import styles from "./about.module.css";
 
 export default function About() {
@@ -43,6 +44,15 @@ export default function About() {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        <section className={styles.sectionTabs} aria-label="About sections">
+          <div className={styles.sectionTabsInner}>
+            <span>Skills</span>
+            <span>Work Experience</span>
+            <span>Education</span>
+            <span>Hobbies</span>
           </div>
         </section>
 
@@ -146,21 +156,6 @@ export default function About() {
                   </li>
                 </ul>
               </article>
-              <article className={styles.roleCard}>
-                <div className={styles.roleHeader}>
-                  <h3 className={styles.roleTitle}>Barista</h3>
-                  <p className={styles.roleMeta}>
-                    Starbucks — September 2023 to Present
-                  </p>
-                </div>
-                <ul className={styles.roleList}>
-                  <li>
-                    Prepared beverages while maintaining quality and speed.
-                  </li>
-                  <li>Managed payments and customer service interactions.</li>
-                  <li>Supported team operations during peak periods.</li>
-                </ul>
-              </article>
             </div>
           </div>
         </section>
@@ -192,22 +187,6 @@ export default function About() {
                   </li>
                 </ul>
               </article>
-              <article className={styles.eduCard}>
-                <h3 className={styles.eduTitle}>Dual IT Diploma</h3>
-                <p className={styles.eduMeta}>
-                  Technical Vocational High School — 2020 to 2023
-                </p>
-                <ul className={styles.eduList}>
-                  <li>
-                    Created digital assets and animations for interactive media
-                    projects.
-                  </li>
-                  <li>
-                    Practiced coding fundamentals including variables,
-                    conditionals, and reusable logic.
-                  </li>
-                </ul>
-              </article>
             </div>
           </div>
         </section>
@@ -215,7 +194,7 @@ export default function About() {
         <section className={`${styles.section} ${styles.hobbies}`}>
           <div className={styles.sectionInner}>
             <header className={styles.sectionHeader}>
-              <h2 className={styles.sectionTitle}>Hobbies + Interests</h2>
+              <h2 className={styles.sectionTitle}>Hobbies</h2>
               <p className={styles.sectionSubtitle}>
                 Outside of work, I enjoy a mix of creative and active pursuits.
               </p>
@@ -234,25 +213,22 @@ export default function About() {
                 Working Out
               </article>
             </div>
-            <div className={styles.hobbyImageRow}>
-              <article className={styles.hobbyImageCard}>
-                <div className={styles.hobbyImage} aria-hidden="true" />
-                Traveling
-              </article>
-              <article className={styles.hobbyImageCard}>
-                <div className={styles.hobbyImage} aria-hidden="true" />
-                Photography
-              </article>
-            </div>
-            <div className={styles.hobbyGrid}>
-              <article className={styles.hobbyCard}>
-                <div className={styles.hobbyBlock} aria-hidden="true" />
-                Cafe Hopping
-              </article>
-              <article className={styles.hobbyCard}>
-                <div className={styles.hobbyBlock} aria-hidden="true" />
-                Vlogging/Editing
-              </article>
+            <div className={styles.hobbyPanels}>
+              <HobbiesCard
+                title="TRAVELING"
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+                images={[]}
+              />
+              <HobbiesCard
+                title="PHOTOGRAPHY"
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+                images={[]}
+              />
+              <HobbiesCard
+                title="CAFE HOPPING"
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+                images={[]}
+              />
             </div>
           </div>
         </section>

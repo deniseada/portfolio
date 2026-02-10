@@ -1,22 +1,28 @@
 "use client";
 
-import { useState } from "react";
 import styles from "./project-nav.module.css";
 
-export default function ProjectNav() {
-  const [activeCategory, setActiveCategory] = useState("All");
+const defaultCategories = [
+  { id: "all", label: "All" },
+  { id: "web", label: "Web Development" },
+  { id: "ux", label: "UX/UI" },
+  { id: "graphic", label: "Graphic Design" },
+];
 
-  const categories = ["All", "Web Development", "UX/UI", "Graphic Design"];
-
+export default function ProjectNav({
+  activeCategory,
+  onChange,
+  categories = defaultCategories,
+}) {
   return (
     <nav className={styles.projectNav}>
       {categories.map((category) => (
         <button
-          key={category}
-          className={`${styles.navButton} ${activeCategory === category ? styles.active : ""}`}
-          onClick={() => setActiveCategory(category)}
+          key={category.id}
+          className={`${styles.navButton} ${activeCategory === category.id ? styles.active : ""}`}
+          onClick={() => onChange(category.id)}
         >
-          {category}
+          {category.label}
         </button>
       ))}
     </nav>
