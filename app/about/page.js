@@ -3,6 +3,7 @@
 import NavBar from "../../ui/nav-bar/page";
 import Footer from "../../ui/footer/page";
 import HobbiesCard from "../../ui/hobbies-card/page";
+import ExperienceCard from "../../ui/experience-card/page";
 import styles from "./about.module.css";
 
 export default function About() {
@@ -47,16 +48,16 @@ export default function About() {
           </div>
         </section>
 
-        <section className={styles.sectionTabs} aria-label="About sections">
+        <nav className={styles.sectionTabs} aria-label="About sections">
           <div className={styles.sectionTabsInner}>
-            <span>Skills</span>
-            <span>Work Experience</span>
-            <span>Education</span>
-            <span>Hobbies</span>
+            <a href="#skills">Skills</a>
+            <a href="#work-experience">Work Experience</a>
+            <a href="#education">Education</a>
+            <a href="#hobbies">Hobbies</a>
           </div>
-        </section>
+        </nav>
 
-        <section className={`${styles.section} ${styles.skills}`}>
+        <section id="skills" className={`${styles.section} ${styles.skills}`}>
           <div className={styles.sectionInner}>
             <header className={styles.sectionHeader}>
               <h2 className={styles.sectionTitle}>Skills</h2>
@@ -100,7 +101,10 @@ export default function About() {
           </div>
         </section>
 
-        <section className={`${styles.section} ${styles.experience}`}>
+        <section
+          id="work-experience"
+          className={`${styles.section} ${styles.experience}`}
+        >
           <div className={styles.sectionInner}>
             <header className={styles.sectionHeader}>
               <h2 className={styles.sectionTitle}>Work Experience</h2>
@@ -109,58 +113,32 @@ export default function About() {
               </p>
             </header>
             <div className={styles.timeline}>
-              <article className={styles.roleCard}>
-                <div className={styles.roleHeader}>
-                  <h3 className={styles.roleTitle}>
-                    Front-End / Full-Stack Developer
-                  </h3>
-                  <p className={styles.roleMeta}>
-                    Got It Web App — September 2025 to December 2025
-                  </p>
-                </div>
-                <ul className={styles.roleList}>
-                  <li>
-                    Developed a full-stack web application that simplifies dense
-                    electrical manuals for students.
-                  </li>
-                  <li>
-                    Built a custom PDF viewer with tools for highlighting and
-                    content personalization.
-                  </li>
-                  <li>
-                    Collaborated with designers and engineers to translate UI/UX
-                    into responsive components.
-                  </li>
-                </ul>
-              </article>
-              <article className={styles.roleCard}>
-                <div className={styles.roleHeader}>
-                  <h3 className={styles.roleTitle}>
-                    UX/UI Designer + Front-End Developer
-                  </h3>
-                  <p className={styles.roleMeta}>
-                    Premiere Web App — January 2025 to May 2025
-                  </p>
-                </div>
-                <ul className={styles.roleList}>
-                  <li>
-                    Designed intuitive user flows with usability, accessibility,
-                    and clarity as core goals.
-                  </li>
-                  <li>
-                    Implemented responsive UI with HTML, CSS, and JavaScript.
-                  </li>
-                  <li>
-                    Created research-driven wireframes, mockups, and prototypes
-                    in Figma.
-                  </li>
-                </ul>
-              </article>
+              <ExperienceCard
+                title="Front-End / Full-Stack Developer"
+                project="Got It Web App — September 2025 to December 2025"
+                bullets={[
+                  "Developed a full-stack web application that simplifies dense electrical manuals for students.",
+                  "Built a custom PDF viewer with tools for highlighting and content personalization.",
+                  "Collaborated with designers and engineers to translate UI/UX into responsive components.",
+                ]}
+              />
+              <ExperienceCard
+                title="UX/UI Designer + Front-End Developer"
+                project="Premiere Web App — January 2025 to May 2025"
+                bullets={[
+                  "Designed intuitive user flows with usability, accessibility, and clarity as core goals.",
+                  "Implemented responsive UI with HTML, CSS, and JavaScript.",
+                  "Created research-driven wireframes, mockups, and prototypes in Figma.",
+                ]}
+              />
             </div>
           </div>
         </section>
 
-        <section className={`${styles.section} ${styles.education}`}>
+        <section
+          id="education"
+          className={`${styles.section} ${styles.education}`}
+        >
           <div className={styles.sectionInner}>
             <header className={styles.sectionHeader}>
               <h2 className={styles.sectionTitle}>Education</h2>
@@ -191,7 +169,7 @@ export default function About() {
           </div>
         </section>
 
-        <section className={`${styles.section} ${styles.hobbies}`}>
+        <section id="hobbies" className={`${styles.section} ${styles.hobbies}`}>
           <div className={styles.sectionInner}>
             <header className={styles.sectionHeader}>
               <h2 className={styles.sectionTitle}>Hobbies</h2>

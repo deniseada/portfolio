@@ -15,7 +15,7 @@
   display: grid;
   grid-template-columns: auto minmax(0, 1fr) auto minmax(0, 1fr);
   gap: 1.6rem;
-  align-items: center;
+  align-items: start;
 }
 
 .navButton {
@@ -26,6 +26,7 @@
   color: transparent;
   cursor: pointer;
   position: relative;
+  align-self: center;
 }
 
 .navButton::before {
@@ -63,6 +64,7 @@
 .content {
   display: grid;
   gap: 0.6rem;
+  align-self: start;
 }
 
 .text {

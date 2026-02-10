@@ -1,0 +1,46 @@
+.card {
+  background: #efebe4;
+  padding: 1.6rem 1.8rem;
+  border-left: 4px solid var(--color-brown);
+  box-shadow: 0 12px 22px rgba(20, 16, 11, 0.12);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  margin-bottom: 0.65rem;
+}
+
+.title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--color-slate);
+}
+
+.meta {
+  display: grid;
+  gap: 0.2rem;
+  font-size: 0.9rem;
+  color: var(--color-ink);
+  font-weight: 600;
+}
+
+.projectName {
+  font-weight: 700;
+}
+
+.projectDate {
+  font-style: italic;
+  font-weight: 600;
+}
+
+.list {
+  display: grid;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--color-ink);
+  line-height: 1.6;
+  padding-left: 1.3rem;
+  list-style: disc;
+}
