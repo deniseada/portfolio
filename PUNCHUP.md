@@ -1,6 +1,7 @@
 # Portfolio Punch Up - Smiski Unboxing
 
-**Overview**
+## Overview
+
 This project will be an interactive digital smiski unboxing website. It has been a trend recently to open these toy blindboxes without knowing what's inside them creating a fun, exciting, and suspenseful experience, hence the name "blindbox".
 This project will simulate the same experience but digital. It will animate a similar expeirence to give a familar dopamine hit as it would in real life.
 
@@ -8,7 +9,8 @@ This project will simulate the same experience but digital. It will animate a si
 
 - https://www.figma.com/design/BCT2HxF8lNeSz4kSqxx8WZ/Smiski-Blindbox?node-id=0-1&t=spndvyWnsw6O8mXn-1
 
-**What am I actually building?**
+## What am I actually building?
+
 I want to build a digital unboxing experience with the following:
 
 - Landing page that will visually be inspired by the smiski brand.
@@ -21,19 +23,20 @@ I want to build a digital unboxing experience with the following:
 
 Overall, the goal is to simulate the exact experince as users would in real life when opening a blindbox.
 
-**Why this enhances my portfolio?**
+## Why this enhances my portfolio?
+
 First of all, I think this shows a lot abot my personality and what I enjoy. It's always a fun experince for me opening up and not knowing the chances to pulling the figurines that I want.
 
 This also demonstrates interactive UI design, as well as Animations, Randomization logic and I will be also building my own components / designing them on Adobe Illustrator.
 
 Not only does this reflect my personal interests, but also provides a playful interactive user experience that is authetic and aligns with my creative direction.
 
-**Resources**
+## Resources
 
 - I would be referencing the charcter and overall concept of the brand.
 - illustrator to design box and most graphics in the web page.
 
-**Fears and Doubts**
+## Fears and Doubts
 
 - I think It might be time constraining, I would need to manage my time well in order to achieve something that I would be satisfied with.
 - Not quiet sure if it's portfolio-level project rather than just a fun side quest.
