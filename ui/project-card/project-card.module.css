@@ -2,7 +2,7 @@
   background: var(--color-card-right);
   background-size: cover;
   background-position: center;
-  min-height: 16rem;
+  min-height: 20rem;
   padding: 1.4rem;
   display: flex;
   flex-direction: column;

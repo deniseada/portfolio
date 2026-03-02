@@ -19,41 +19,51 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "UI/UX DESIGN SYSTEM",
-      category: "ux",
+      title: "GOT IT BROCHURE",
+      category: "graphic",
       wide: true,
-      image: "/case-study/got-it/gotit-laptop.png",
+      image: "/project-mockup/gotit-brochure.jpg",
     },
     {
       title: "BILLBOARD ADVERTISEMENT",
       category: "graphic",
-      image: "/eadvert/eAdvert.png",
+      image: "/project-mockup/cow-billboard.png",
     },
     {
-      title: "MUSE MAGAZINE",
-      category: "graphic",
-      image: "/project-images/milk-poster.png",
+      title: "UI/UX DESIGN SYSTEM",
+      category: "ux",
+      image: "/project-mockup/menu-mockup.png",
     },
     {
       title: "LOTUS POSTER",
       category: "graphic",
-      image: "/project-images/lotus-poster.png",
+      image: "/project-mockup/lotus-mockup.png",
     },
     {
-      title: "BRUNCH MENU",
-      category: "graphic",
-      image: "/project-images/brunch-menu.png",
+      title: "LANDING PAGE",
+      category: "web",
+      image: "/project-mockup/landing-page.png",
     },
     {
       title: "CAMERA REFERENCE",
       category: "ux",
-      image: "/project-images/camera-reference.png",
+      image: "/project-mockup/camera-bg.png",
     },
     {
       title: "SPOTIFY",
       category: "graphic",
       wide: true,
-      image: "/project-images/cow.jpg",
+      image: "/project-mockup/spotify.png",
+    },
+    {
+      title: "WATERCOLOR PAINTING",
+      category: "graphic",
+      image: "/project-mockup/painting.png",
+    },
+    {
+      title: "E-ADVERTISING",
+      category: "graphic",
+      image: "/project-mockup/eAdvert12.png",
     },
   ];
 
