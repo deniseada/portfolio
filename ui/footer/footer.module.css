@@ -1,0 +1,102 @@
+.footer {
+  background-color: #3d4f61;
+  color: #f5f1ed;
+  padding: 3rem 0;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: min(92vw, 79.5rem);
+  max-width: 1400px;
+  padding: 0 2rem;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  column-gap: 4rem;
+  align-items: flex-start;
+}
+
+.logoSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  align-items: flex-start;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  fill: #f5f1ed;
+}
+
+.resumeLink {
+  color: #f5f1ed;
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.resumeLink:hover {
+  opacity: 0.7;
+}
+
+.spacer {
+  display: none;
+}
+
+.menuSection {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  justify-self: end;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.heading {
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin: 0 0 0.25rem 0;
+}
+
+.link {
+  color: #f5f1ed;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: opacity 0.3s ease;
+}
+
+.link:hover {
+  opacity: 0.7;
+}
+
+.copyright {
+  color: #f5f1ed;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .logoSection {
+    align-items: flex-start;
+  }
+}
