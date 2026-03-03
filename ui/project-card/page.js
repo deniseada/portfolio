@@ -16,7 +16,11 @@ export default function ProjectCard({
       <div
         className={styles.imageContainer}
         style={image ? { backgroundImage: `url(${image})` } : undefined}
-      />
+      >
+        <div className={styles.overlay}>
+          <span className={styles.overlayText}>VIEW PROJECT</span>
+        </div>
+      </div>
       <div className={styles.cardInfo}>
         <h3 className={styles.title}>{title}</h3>
         {categoryLabel && <p className={styles.category}>{categoryLabel}</p>}

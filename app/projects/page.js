@@ -32,56 +32,56 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "GOT IT",
+      title: "Got It",
       category: ["ux", "web"],
       wide: true,
       image: "/project-mockup/gotit-brochure.jpg",
       slug: "got-it",
     },
     {
-      title: "BILLBOARD ADVERTISEMENT",
+      title: "Heavenly Milk Graphic",
       category: "graphic",
       image: "/project-mockup/cow-billboard.png",
     },
     {
-      title: "LOTUS POSTER",
+      title: "Forest Guardian",
       category: "graphic",
       image: "/project-mockup/lotus-mockup.png",
     },
     {
-      title: "E-ADVERTISING",
+      title: "Travel eAdvert",
       category: "graphic",
       image: "/project-mockup/eAdvert-mockup.png",
     },
     {
-      title: "ROCK PAPER SCISSORS GAME",
+      title: "Rock Paper Scissors Game",
       category: "web",
       image: "/project-mockup/landing-page.png",
     },
     {
-      title: "SPOTIFY",
+      title: "Spotify Promo Video",
       category: "Motion Graphics",
       wide: true,
       image: "/project-mockup/spotify.png",
     },
 
     {
-      title: "BRUNCH MENU",
+      title: "Brunch Menu Design",
       category: "graphic",
       image: "/project-mockup/menu-mockup.png",
     },
     {
-      title: "PAINTING",
+      title: "B&W Painting",
       category: "Photoshop Painting",
       image: "/project-mockup/painting.png",
     },
     {
-      title: "CAMERA REFERENCE",
+      title: "Camera Illustration",
       category: "Illustrator",
       image: "/project-mockup/camera-bg.png",
     },
     {
-      title: "LEND IT OUT",
+      title: "LendItOut",
       category: ["ux", "web"],
       image: "/case-study/lenditout/lenditout-phones.png",
     },
