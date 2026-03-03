@@ -31,42 +31,31 @@ export default function GotItCaseStudy() {
         <section className={styles.header}>
           <div className={styles.headerContent}>
             <div className={styles.headerLeft}>
-              <div className={styles.mockupImages}>
-                <img
-                  src="/case-study/got-it/phone-mockup.png"
-                  alt="Phone mockup"
-                  className={styles.phoneMockup}
-                />
-                <img
-                  src="/case-study/got-it/desktop-mockup.png"
-                  alt="Desktop mockup"
-                  className={styles.desktopMockup}
-                />
-              </div>
-            </div>
-            <div className={styles.headerRight}>
-              <span className={styles.badge}>UX/UI DESIGN</span>
+              <span className={styles.badge}>FRONT-END DEVELOPER</span>
               <h1 className={styles.title}>GOT IT</h1>
               <h2 className={styles.subtitle}>
                 This Is What Studying Looks Like With AI
               </h2>
-              <div className={styles.descriptionBox}>
-                <h3 className={styles.boxTitle}>
-                  Fully-Functional Web Interface
-                </h3>
-                <p className={styles.description}>
-                  Got It is a productivity app I designed and developed to
-                  support university students' studying. Got It is designed to
-                  support university students doing independent studying with an
-                  all-in-one app that includes a pomodoro timer, notepad, and AI
-                  chat made both accessible and aesthetically pleasing. This app
-                  was developed and designed in 3 weeks. I chose produced
-                  Excalidraw wireframes, a Figma-made produced Figma! - as a
-                  prototype, and used Next.JS and GPT to code this app.
-                </p>
+              <p className={styles.description}>
+                Got It is a productivity app designed and developed to support
+                university students' studying. Got It is designed to support
+                university students doing independent studying with an
+                all-in-one app that includes a pomodoro timer, notepad, and AI
+                chat made both accessible and aesthetically pleasing. This app
+                was developed and designed in 3 weeks.
+              </p>
+            </div>
+            <div className={styles.headerRight}>
+              <div className={styles.metaSection}>
+                <span className={styles.metaLabel}>ROLE</span>
+                <p className={styles.metaValue}>UX/UI Designer & Developer</p>
               </div>
-              <a href="#" className={styles.viewButton}>
-                VIEW PROJECT
+              <div className={styles.metaSection}>
+                <span className={styles.metaLabel}>TOOLS</span>
+                <p className={styles.metaValue}>Figma, Next.js, React</p>
+              </div>
+              <a href="#" className={styles.viewLive}>
+                VIEW LIVE <span className={styles.arrow}>↗</span>
               </a>
             </div>
           </div>

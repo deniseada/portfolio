@@ -9,127 +9,124 @@
   gap: 0;
 }
 
-.main p {
-  max-width: 65ch;
-}
-
 /* Header Section */
 .header {
   background-color: #f9f9f9;
-  padding: 6rem 2rem 4rem;
+  padding: 10rem 2rem 6rem;
   display: flex;
   justify-content: center;
 }
 
 .headerContent {
-  width: min(92vw, 75rem);
+  width: min(92vw, 60rem);
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 6rem;
   align-items: start;
+  margin: 0 auto;
 }
 
 .headerLeft {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.mockupImages {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.badge {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  width: fit-content;
+  color: #000;
 }
 
-.phoneMockup {
-  width: 30%;
-  height: auto;
-  position: absolute;
-  left: 10%;
-  top: 10%;
-  z-index: 2;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+.title {
+  font-size: 4.5rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.1;
+  font-family: serif;
 }
 
-.desktopMockup {
-  width: 80%;
-  height: auto;
-  position: relative;
-  z-index: 1;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.5;
+  color: #000;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin: 0;
+  color: #000;
+  max-width: 55ch;
 }
 
 .headerRight {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2.5rem;
+  padding-top: 0.5rem;
+  align-self: end;
 }
 
-.badge {
-  background-color: #e91e63;
-  color: white;
-  padding: 0.5rem 1.5rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  width: fit-content;
-  border-radius: 2px;
+.metaSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.title {
-  font-size: 4rem;
-  font-weight: 700;
-  margin: 0;
-  letter-spacing: 0.05em;
+.metaLabel {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: #000;
 }
 
-.subtitle {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 0;
-  line-height: 1.3;
-}
-
-.descriptionBox {
-  background-color: white;
-  border: 2px solid #000;
-  padding: 1.5rem;
-  margin-top: 1rem;
-}
-
-.boxTitle {
+.metaValue {
   font-size: 1rem;
-  font-weight: 700;
-  margin: 0 0 1rem 0;
-}
-
-.description {
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-weight: 400;
   margin: 0;
-  color: #333;
+  color: #000;
+  line-height: 1.5;
 }
 
-.viewButton {
-  background-color: #000;
-  color: white;
-  padding: 1rem 2.5rem;
+.viewLive {
+  color: #000;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  letter-spacing: 0.1em;
+  font-weight: 500;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
   width: fit-content;
-  margin-top: 1rem;
-  border-radius: 2px;
-  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: opacity 0.3s;
 }
 
-.viewButton:hover {
-  background-color: #333;
+.viewLive:hover {
+  opacity: 0.7;
+}
+
+.arrow {
+  font-size: 1rem;
+}
+
+/* Features Overview Section */
+.featuresSection {
+  background-color: #f9f9f9;
+  padding: 1rem 2rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featuresImage {
+  width: min(92vw, 60rem);
+  height: auto;
+  display: block;
 }
 
 /* Table of Contents */
