@@ -10,7 +10,10 @@ export default function NavBar() {
   const [isContactOpen, setIsContactOpen] = useState(false);
 
   const isActive = (href) => {
-    return pathname === href;
+    if (href === "/") {
+      return pathname === "/";
+    }
+    return pathname === href || pathname.startsWith(href + "/");
   };
 
   useEffect(() => {

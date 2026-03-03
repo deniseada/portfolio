@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import NavBar from "../../ui/nav-bar/page";
 import ProjectNav from "../../ui/project-nav/page";
 import ProjectCard from "../../ui/project-card/page";
@@ -19,10 +20,11 @@ export default function Projects() {
 
   const projects = [
     {
-      title: "GOT IT BROCHURE",
-      category: "graphic",
+      title: "GOT IT",
+      category: ["ux", "web"],
       wide: true,
       image: "/project-mockup/gotit-brochure.jpg",
+      slug: "got-it",
     },
     {
       title: "BILLBOARD ADVERTISEMENT",
@@ -30,47 +32,58 @@ export default function Projects() {
       image: "/project-mockup/cow-billboard.png",
     },
     {
-      title: "UI/UX DESIGN SYSTEM",
-      category: "ux",
-      image: "/project-mockup/menu-mockup.png",
-    },
-    {
       title: "LOTUS POSTER",
       category: "graphic",
       image: "/project-mockup/lotus-mockup.png",
     },
     {
-      title: "LANDING PAGE",
+      title: "E-ADVERTISING",
+      category: "graphic",
+      image: "/project-mockup/eAdvert-mockup.png",
+    },
+    {
+      title: "ROCK PAPER SCISSORS GAME",
       category: "web",
       image: "/project-mockup/landing-page.png",
     },
     {
-      title: "CAMERA REFERENCE",
-      category: "ux",
-      image: "/project-mockup/camera-bg.png",
-    },
-    {
       title: "SPOTIFY",
-      category: "graphic",
+      category: "",
       wide: true,
       image: "/project-mockup/spotify.png",
     },
+
     {
-      title: "WATERCOLOR PAINTING",
+      title: "BRUNCH MENU",
       category: "graphic",
+      image: "/project-mockup/menu-mockup.png",
+    },
+    {
+      title: "PAINTING",
+      category: "",
       image: "/project-mockup/painting.png",
     },
     {
-      title: "E-ADVERTISING",
-      category: "graphic",
-      image: "/project-mockup/eAdvert12.png",
+      title: "CAMERA REFERENCE",
+      category: "",
+      image: "/project-mockup/camera-bg.png",
+    },
+    {
+      title: "LEND IT OUT",
+      category: ["ux", "web"],
+      image: "/case-study/lenditout/lenditout-phones.png",
     },
   ];
 
   const visibleProjects =
     activeCategory === "all"
       ? projects
-      : projects.filter((project) => project.category === activeCategory);
+      : projects.filter((project) => {
+          const projectCategories = Array.isArray(project.category)
+            ? project.category
+            : [project.category];
+          return projectCategories.includes(activeCategory);
+        });
 
   return (
     <div className={styles.page}>
@@ -83,16 +96,30 @@ export default function Projects() {
           categories={categories}
         />
         <section className={styles.projectGrid}>
-          {visibleProjects.map((project, index) => (
-            <ProjectCard
-              key={`${project.title}-${index}`}
-              className={project.wide ? styles.projectWide : ""}
-              title={project.title}
-              body={project.body}
-              category={project.category}
-              image={project.image}
-            />
-          ))}
+          {visibleProjects.map((project, index) => {
+            const card = (
+              <ProjectCard
+                key={`${project.title}-${index}`}
+                className={project.wide ? styles.projectWide : ""}
+                title={project.title}
+                body={project.body}
+                category={project.category}
+                image={project.image}
+              />
+            );
+
+            return project.slug ? (
+              <Link
+                key={`${project.title}-${index}`}
+                href={`/projects/${project.slug}`}
+                className={`${styles.projectLink} ${project.wide ? styles.projectWide : ""}`}
+              >
+                {card}
+              </Link>
+            ) : (
+              card
+            );
+          })}
         </section>
       </main>
       <Footer />
