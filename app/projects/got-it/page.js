@@ -1,10 +1,28 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import NavBar from "../../../ui/nav-bar/page";
 import Footer from "../../../ui/footer/page";
 import styles from "./case-study.module.css";
 
 export default function GotItCaseStudy() {
+  const [showScrollButton, setShowScrollButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollButton(window.scrollY > 500);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTOC = () => {
+    const tocSection = document.querySelector(`.${styles.tocSection}`);
+    if (tocSection) {
+      tocSection.scrollIntoView({ behavior: "smooth" });
+    }
+  };
   return (
     <div className={styles.page}>
       <NavBar />
@@ -437,6 +455,13 @@ export default function GotItCaseStudy() {
         </section>
       </main>
       <Footer />
+      <button
+        className={`${styles.scrollToTopButton} ${showScrollButton ? styles.visible : styles.hidden}`}
+        onClick={scrollToTOC}
+        aria-label="Scroll to table of contents"
+      >
+        ↑
+      </button>
     </div>
   );
 }

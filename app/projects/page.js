@@ -18,6 +18,18 @@ export default function Projects() {
     { id: "graphic", label: "Graphic Design" },
   ];
 
+  const getCategoryLabel = (categoryIds) => {
+    if (!categoryIds) return "";
+    const ids = Array.isArray(categoryIds) ? categoryIds : [categoryIds];
+    return ids
+      .map((id) => {
+        const foundCategory = categories.find((cat) => cat.id === id);
+        return foundCategory ? foundCategory.label : id;
+      })
+      .filter(Boolean)
+      .join(" / ");
+  };
+
   const projects = [
     {
       title: "GOT IT",
@@ -48,7 +60,7 @@ export default function Projects() {
     },
     {
       title: "SPOTIFY",
-      category: "",
+      category: "Motion Graphics",
       wide: true,
       image: "/project-mockup/spotify.png",
     },
@@ -60,12 +72,12 @@ export default function Projects() {
     },
     {
       title: "PAINTING",
-      category: "",
+      category: "Photoshop Painting",
       image: "/project-mockup/painting.png",
     },
     {
       title: "CAMERA REFERENCE",
-      category: "",
+      category: "Illustrator",
       image: "/project-mockup/camera-bg.png",
     },
     {
@@ -104,6 +116,7 @@ export default function Projects() {
                 title={project.title}
                 body={project.body}
                 category={project.category}
+                categoryLabel={getCategoryLabel(project.category)}
                 image={project.image}
               />
             );
