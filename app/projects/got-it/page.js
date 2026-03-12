@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import NavBar from "../../../ui/nav-bar/page";
 import Footer from "../../../ui/footer/page";
-import FloatingBlurBg from "../../../ui/floating-blur-bg/page";
+import FloatingLines from "../../../ui/floating-lines/FloatingLines";
 import styles from "./case-study.module.css";
 
 export default function GotItCaseStudy() {
@@ -30,7 +30,17 @@ export default function GotItCaseStudy() {
       <main className={styles.main}>
         {/* Header Section */}
         <section className={styles.header}>
-          <FloatingBlurBg />
+          <FloatingLines
+            linesGradient={["#7E5E8F", "#654C79", "#4F3D63"]}
+            enabledWaves={["top", "middle", "bottom"]}
+            lineCount={[7, 9, 7]}
+            lineDistance={[10, 8, 10]}
+            animationSpeed={0.55}
+            interactive={false}
+            parallax={false}
+            mixBlendMode="screen"
+            opacity={0.35}
+          />
           <div className={styles.headerContent}>
             <div className={styles.headerLeft}>
               <span className={styles.badge}>FRONT-END DEVELOPER</span>

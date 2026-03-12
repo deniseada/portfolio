@@ -11,12 +11,28 @@
 
 /* Header Section */
 .header {
-  background-color: #f9f9f9;
-  padding: 10rem 2rem 6rem;
+  background: linear-gradient(180deg, #1a1522 0%, #17121f 62%, #211b2a 100%);
+  padding: 10rem 2rem 8.5rem;
+  min-height: 100svh;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
   overflow: hidden;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 7rem;
+  background: linear-gradient(
+    180deg,
+    rgba(23, 18, 31, 0) 0%,
+    rgba(45, 45, 45, 0.75) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
 }
 
 .headerContent {
@@ -28,7 +44,7 @@
   margin: 0 auto;
   transform: translateX(5rem);
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .headerLeft {
@@ -42,7 +58,7 @@
   font-weight: 500;
   letter-spacing: 0.15em;
   width: fit-content;
-  color: #000;
+  color: #f5f1ed;
 }
 
 .title {
@@ -51,6 +67,7 @@
   margin: 0;
   line-height: 1.1;
   font-family: serif;
+  color: #f5f1ed;
 }
 
 .subtitle {
@@ -58,14 +75,14 @@
   font-weight: 400;
   margin: 0;
   line-height: 1.5;
-  color: #000;
+  color: #f5f1ed;
 }
 
 .description {
   font-size: 0.95rem;
   line-height: 1.8;
   margin: 0;
-  color: #000;
+  color: rgba(245, 241, 237, 0.86);
   max-width: 55ch;
 }
 
@@ -87,20 +104,20 @@
   font-size: 0.65rem;
   font-weight: 500;
   letter-spacing: 0.15em;
-  color: #000;
+  color: rgba(245, 241, 237, 0.7);
 }
 
 .metaValue {
   font-size: 1rem;
   font-weight: 400;
   margin: 0;
-  color: #000;
+  color: #f5f1ed;
   line-height: 1.5;
 }
 
 .viewLive {
-  color: var(--color-cream);
-  background-color: var(--color-brown);
+  color: #131019;
+  background-color: #f5f1ed;
   text-decoration: none;
   font-weight: 500;
   font-size: 0.65rem;
@@ -145,6 +162,7 @@
   flex-direction: column;
   align-items: center;
   scroll-margin-top: 100px;
+  position: relative;
 }
 
 .tocTitle {

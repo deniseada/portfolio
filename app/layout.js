@@ -1,5 +1,6 @@
 import { Jost, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import ClickSpark from "../ui/click-spark/ClickSpark";
 
 const jost = Jost({
   variable: "--font-jost",
@@ -25,7 +26,15 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${jost.variable} ${playfair.variable}`}>
-        {children}
+        <ClickSpark
+          sparkColor="#7c5c3e"
+          sparkSize={12}
+          sparkRadius={18}
+          sparkCount={8}
+          duration={500}
+        >
+          {children}
+        </ClickSpark>
       </body>
     </html>
   );
