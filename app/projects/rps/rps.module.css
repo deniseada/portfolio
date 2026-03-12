@@ -10,12 +10,28 @@
 }
 
 .header {
-  background-color: #f9f9f9;
-  padding: 10rem 2rem 6rem;
+  background: linear-gradient(180deg, #050e1a 0%, #071a2e 55%, #0a2340 100%);
+  padding: 10rem 2rem 8.5rem;
+  min-height: 100svh;
   display: flex;
   justify-content: center;
+  align-items: center;
   position: relative;
   overflow: hidden;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 12rem;
+  background: linear-gradient(
+    180deg,
+    rgba(5, 14, 26, 0) 0%,
+    rgba(7, 26, 46, 0.6) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
 }
 
 .headerContent {
@@ -27,7 +43,7 @@
   margin: 0 auto;
   transform: translateX(5rem);
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 .headerLeft {
@@ -41,7 +57,7 @@
   font-weight: 500;
   letter-spacing: 0.15em;
   width: fit-content;
-  color: #000;
+  color: rgba(180, 230, 255, 0.85);
 }
 
 .title {
@@ -50,7 +66,7 @@
   margin: 0;
   line-height: 1.1;
   font-family: serif;
-  color: #000;
+  color: #e8f4ff;
 }
 
 .subtitle {
@@ -58,14 +74,14 @@
   font-weight: 400;
   margin: 0;
   line-height: 1.5;
-  color: #000;
+  color: #e8f4ff;
 }
 
 .description {
   font-size: 0.95rem;
   line-height: 1.8;
   margin: 0;
-  color: #000;
+  color: rgba(200, 230, 255, 0.82);
   max-width: 55ch;
 }
 
@@ -87,20 +103,20 @@
   font-size: 0.65rem;
   font-weight: 500;
   letter-spacing: 0.15em;
-  color: #000;
+  color: rgba(180, 220, 255, 0.7);
 }
 
 .metaValue {
   font-size: 1rem;
   font-weight: 400;
   margin: 0;
-  color: #000;
+  color: #e8f4ff;
   line-height: 1.5;
 }
 
 .viewLive {
-  color: var(--color-cream);
-  background-color: var(--color-brown);
+  color: #071a2e;
+  background-color: #7dd4f8;
   text-decoration: none;
   font-weight: 500;
   font-size: 0.65rem;
@@ -137,56 +153,79 @@
 }
 
 .tocSection {
-  background-color: #2d2d2d;
+  background-color: #071a2e;
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   scroll-margin-top: 100px;
+  position: relative;
 }
 
 .tocTitle {
-  color: white;
-  font-size: 2rem;
-  font-weight: 600;
-  margin: 0 0 2rem 0;
+  color: #e8f4ff;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0 0 1.6rem 0;
   text-align: center;
+  opacity: 0.8;
 }
 
 .tocGrid {
   width: min(92vw, 60rem);
   display: grid;
-  grid-template-columns: repeat(2, max-content);
-  gap: 2rem 8rem;
-  justify-content: center;
-  justify-items: start;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 .tocItem {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 1rem;
+  width: 100%;
+  min-height: 5.25rem;
+  padding: 1.1rem 1.25rem;
   text-decoration: none;
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  border: 1px solid rgba(100, 200, 255, 0.15);
+  background: linear-gradient(180deg, rgba(100, 200, 255, 0.06) 0%, rgba(100, 200, 255, 0.02) 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
 }
 
 .tocItem:hover {
-  opacity: 0.7;
+  transform: translateY(-3px);
+  border-color: rgba(100, 200, 255, 0.45);
+  background: linear-gradient(180deg, rgba(100, 200, 255, 0.14) 0%, rgba(100, 200, 255, 0.04) 100%);
+  box-shadow: 0 14px 30px rgba(0, 20, 50, 0.3);
 }
 
 .tocNumber {
-  color: white;
-  font-size: 1.5rem;
+  color: #e8f4ff;
+  font-size: 0.85rem;
   font-weight: 700;
+  letter-spacing: 0.16em;
   flex-shrink: 0;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(100, 200, 255, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(100, 200, 255, 0.08);
 }
 
 .tocLabel {
-  color: white;
-  font-size: 1rem;
-  font-weight: 500;
-  letter-spacing: 0.05em;
+  color: #e8f4ff;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
 }
 
 .tryButton {
@@ -211,7 +250,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  scroll-margin-top: 100px;
+  scroll-margin-top: 8.5rem;
 }
 
 .sectionHeader {
@@ -237,6 +276,79 @@
   font-weight: 700;
   line-height: 0.8;
   color: #000;
+}
+
+/* Content Wrapper with Sticky TOC Sidebar */
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 0;
+}
+
+.tocSidebar {
+  grid-column: 1;
+  grid-row: 1 / -1;
+  background-color: #f9f9f9;
+  padding: 3rem 2rem 2rem;
+  position: sticky;
+  left: 0;
+  top: 7.5rem;
+  width: 280px;
+  height: calc(100vh - 7.5rem);
+  overflow-y: auto;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  z-index: 20;
+}
+
+.tocNav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tocNavTitle {
+  color: #131019;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem 0;
+  opacity: 0.8;
+}
+
+.tocNavItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+}
+
+.tocNavItem:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.tocNavNumber {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  flex-shrink: 0;
+}
+
+.tocNavLabel {
+  color: #131019;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+}
+
+.contentWrapper > .contentSection {
+  grid-column: 2;
 }
 
 .sectionContent {
@@ -339,5 +451,28 @@
 
   .subheading {
     font-size: 1.2rem;
+  }
+
+  .contentWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .contentWrapper > .contentSection {
+    grid-column: 1;
+  }
+
+  .tocSidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 1.5rem 1rem;
+  }
+
+  .tocNav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 }
