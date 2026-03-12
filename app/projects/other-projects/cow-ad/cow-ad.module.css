@@ -1,0 +1,220 @@
+.page {
+  min-height: 100vh;
+  background-color: var(--color-cream);
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  width: min(92vw, 64rem);
+  margin: 0 auto;
+  padding: 10.5rem 0 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+  flex: 1;
+}
+
+.heroSection {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.title {
+  text-align: center;
+  color: var(--color-ink);
+  font-size: clamp(2.2rem, 6vw, 4.2rem);
+  letter-spacing: 0.06rem;
+  font-weight: 700;
+}
+
+.subtitle {
+  text-align: center;
+  color: var(--color-ink);
+  font-size: clamp(1rem, 2.1vw, 2rem);
+  letter-spacing: 0.03rem;
+  font-weight: 700;
+}
+
+.heroContent {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.heroImageWrap {
+  width: 100%;
+}
+
+.heroImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.sideContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: var(--color-ink);
+}
+
+.sectionHeading {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.bodyText {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  max-width: 35ch;
+}
+
+.toolsHeading {
+  font-size: 2.1rem;
+  font-weight: 700;
+}
+
+.toolBadge {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 1rem;
+  background-color: var(--color-slate);
+  color: var(--color-white);
+  display: grid;
+  place-items: center;
+  font-size: 2.6rem;
+  font-weight: 600;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sectionTitle {
+  color: var(--color-ink);
+  font-size: 1.9rem;
+  font-weight: 700;
+  letter-spacing: 0.03rem;
+}
+
+.sectionTitle span {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.threeGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.gridImage {
+  width: 100%;
+  height: 13.5rem;
+  object-fit: cover;
+  display: block;
+}
+
+.projectGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.projectLink {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.projectCard {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+}
+
+.projectImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition:
+    transform 0.35s ease-in-out,
+    box-shadow 0.35s ease-in-out;
+}
+
+.projectOverlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease-in-out;
+}
+
+.projectOverlayText {
+  color: white;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.projectCard:hover .projectImage {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.projectCard:hover .projectOverlay {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .main {
+    gap: 3rem;
+    padding-top: 9.5rem;
+  }
+
+  .heroContent {
+    grid-template-columns: 1fr;
+  }
+
+  .bodyText {
+    max-width: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .threeGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .projectGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .gridImage {
+    height: auto;
+  }
+
+  .projectCard {
+    aspect-ratio: 1 / 1;
+  }
+
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+
+  .sectionTitle span {
+    font-size: 0.95rem;
+  }
+}

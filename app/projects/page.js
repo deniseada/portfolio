@@ -42,6 +42,7 @@ export default function Projects() {
       title: "Heavenly Milk Graphic",
       category: "graphic",
       image: "/project-mockup/cow-billboard.png",
+      slug: "other-projects/cow-ad",
     },
     {
       title: "Forest Guardian",

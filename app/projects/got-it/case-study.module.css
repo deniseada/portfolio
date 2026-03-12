@@ -15,6 +15,8 @@
   padding: 10rem 2rem 6rem;
   display: flex;
   justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .headerContent {
@@ -24,6 +26,9 @@
   gap: 6rem;
   align-items: start;
   margin: 0 auto;
+  transform: translateX(5rem);
+  position: relative;
+  z-index: 1;
 }
 
 .headerLeft {
@@ -94,7 +99,8 @@
 }
 
 .viewLive {
-  color: #000;
+  color: var(--color-cream);
+  background-color: var(--color-brown);
   text-decoration: none;
   font-weight: 500;
   font-size: 0.65rem;
@@ -103,6 +109,8 @@
   display: flex;
   align-items: center;
   gap: 0.3rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: 0;
   transition: opacity 0.3s;
 }
 
@@ -254,7 +262,6 @@
 .sectionImage {
   width: 100%;
   height: auto;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Section 02: User Research */
@@ -380,7 +387,11 @@
 
 .comparisonImage {
   width: 100%;
+  aspect-ratio: 16 / 9;
   height: auto;
+  object-fit: cover;
+  object-position: center;
+  display: block;
   border: 1px solid #ddd;
   background-color: #fff;
 }
@@ -550,6 +561,7 @@
   .headerContent {
     grid-template-columns: 1fr;
     gap: 2rem;
+    transform: none;
   }
 
   .tocGrid {

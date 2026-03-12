@@ -3,6 +3,7 @@
 import { useState, useEffect } from "react";
 import NavBar from "../../../ui/nav-bar/page";
 import Footer from "../../../ui/footer/page";
+import FloatingBlurBg from "../../../ui/floating-blur-bg/page";
 import styles from "./case-study.module.css";
 
 export default function GotItCaseStudy() {
@@ -29,6 +30,7 @@ export default function GotItCaseStudy() {
       <main className={styles.main}>
         {/* Header Section */}
         <section className={styles.header}>
+          <FloatingBlurBg />
           <div className={styles.headerContent}>
             <div className={styles.headerLeft}>
               <span className={styles.badge}>FRONT-END DEVELOPER</span>
@@ -41,14 +43,13 @@ export default function GotItCaseStudy() {
                 university students' studying. Got It is designed to support
                 university students doing independent studying with an
                 all-in-one app that includes a pomodoro timer, notepad, and AI
-                chat made both accessible and aesthetically pleasing. This app
-                was developed and designed in 3 weeks.
+                chat made both accessible and aesthetically pleasing.
               </p>
             </div>
             <div className={styles.headerRight}>
               <div className={styles.metaSection}>
                 <span className={styles.metaLabel}>ROLE</span>
-                <p className={styles.metaValue}>UX/UI Designer & Developer</p>
+                <p className={styles.metaValue}>Front-End Developer</p>
               </div>
               <div className={styles.metaSection}>
                 <span className={styles.metaLabel}>TOOLS</span>
@@ -126,7 +127,7 @@ export default function GotItCaseStudy() {
             </div>
             <div className={styles.imageColumn}>
               <img
-                src="/case-study/got-it/laptop-mockup.png"
+                src="/case-study/got-it/gotit-laptop.png"
                 alt="Laptop mockup"
                 className={styles.sectionImage}
               />
@@ -232,7 +233,7 @@ export default function GotItCaseStudy() {
                   <div className={styles.comparisonItem}>
                     <span className={styles.label}>Before</span>
                     <img
-                      src="/case-study/got-it/before-1.png"
+                      src="/case-study/got-it/mvp-old.png"
                       alt="Before streamlining"
                       className={styles.comparisonImage}
                     />
@@ -240,7 +241,7 @@ export default function GotItCaseStudy() {
                   <div className={styles.comparisonItem}>
                     <span className={styles.label}>After</span>
                     <img
-                      src="/case-study/got-it/after-1.png"
+                      src="/case-study/got-it/mvp-new.png"
                       alt="After streamlining"
                       className={styles.comparisonImage}
                     />
@@ -254,7 +255,7 @@ export default function GotItCaseStudy() {
                   <div className={styles.comparisonItem}>
                     <span className={styles.label}>Before</span>
                     <img
-                      src="/case-study/got-it/before-2.png"
+                      src="/case-study/got-it/dashboard-old.png"
                       alt="Before simplifying"
                       className={styles.comparisonImage}
                     />
@@ -262,7 +263,7 @@ export default function GotItCaseStudy() {
                   <div className={styles.comparisonItem}>
                     <span className={styles.label}>After</span>
                     <img
-                      src="/case-study/got-it/after-2.png"
+                      src="/case-study/got-it/dashboard-new.png"
                       alt="After simplifying"
                       className={styles.comparisonImage}
                     />
@@ -278,7 +279,7 @@ export default function GotItCaseStudy() {
                   <div className={styles.comparisonItem}>
                     <span className={styles.label}>Before</span>
                     <img
-                      src="/case-study/got-it/before-3.png"
+                      src="/case-study/got-it/homepage.png"
                       alt="Before labels"
                       className={styles.comparisonImage}
                     />
@@ -286,7 +287,7 @@ export default function GotItCaseStudy() {
                   <div className={styles.comparisonItem}>
                     <span className={styles.label}>After</span>
                     <img
-                      src="/case-study/got-it/after-3.png"
+                      src="/case-study/got-it/dashboard-new.png"
                       alt="After labels"
                       className={styles.comparisonImage}
                     />
@@ -302,7 +303,7 @@ export default function GotItCaseStudy() {
                   <div className={styles.comparisonItem}>
                     <span className={styles.label}>Before</span>
                     <img
-                      src="/case-study/got-it/before-4.png"
+                      src="/case-study/got-it/mvp-old.png"
                       alt="Before clarity"
                       className={styles.comparisonImage}
                     />
@@ -310,7 +311,7 @@ export default function GotItCaseStudy() {
                   <div className={styles.comparisonItem}>
                     <span className={styles.label}>After</span>
                     <img
-                      src="/case-study/got-it/after-4.png"
+                      src="/case-study/got-it/homepage.png"
                       alt="After clarity"
                       className={styles.comparisonImage}
                     />
@@ -417,7 +418,7 @@ export default function GotItCaseStudy() {
               </div>
               <div className={styles.finalImage}>
                 <img
-                  src="/case-study/got-it/final-mockup.png"
+                  src="/case-study/got-it/gotit-brochure.jpg"
                   alt="Final product"
                   className={styles.productImage}
                 />
@@ -435,7 +436,7 @@ export default function GotItCaseStudy() {
           <div className={styles.sectionContent}>
             <div className={styles.videoContainer}>
               <img
-                src="/case-study/got-it/promo-video.png"
+                src="/case-study/got-it/gotit-brochure.jpg"
                 alt="Promo video"
                 className={styles.promoVideo}
               />
