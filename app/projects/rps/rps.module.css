@@ -1,0 +1,343 @@
+.page {
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.header {
+  background-color: #f9f9f9;
+  padding: 10rem 2rem 6rem;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.headerContent {
+  width: min(92vw, 60rem);
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 6rem;
+  align-items: start;
+  margin: 0 auto;
+  transform: translateX(5rem);
+  position: relative;
+  z-index: 1;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.badge {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  width: fit-content;
+  color: #000;
+}
+
+.title {
+  font-size: 4.5rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.1;
+  font-family: serif;
+  color: #000;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.5;
+  color: #000;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin: 0;
+  color: #000;
+  max-width: 55ch;
+}
+
+.headerRight {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  padding-top: 0.5rem;
+  align-self: end;
+}
+
+.metaSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.metaLabel {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: #000;
+}
+
+.metaValue {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+  color: #000;
+  line-height: 1.5;
+}
+
+.viewLive {
+  color: var(--color-cream);
+  background-color: var(--color-brown);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: 0;
+  transition: opacity 0.3s;
+}
+
+.viewLive:hover {
+  opacity: 0.7;
+}
+
+.arrow {
+  font-size: 1rem;
+}
+
+.featuresSection {
+  background-color: #f9f9f9;
+  padding: 1rem 2rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featuresImage {
+  width: min(92vw, 60rem);
+  height: auto;
+  display: block;
+}
+
+.tocSection {
+  background-color: #2d2d2d;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-margin-top: 100px;
+}
+
+.tocTitle {
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.tocGrid {
+  width: min(92vw, 60rem);
+  display: grid;
+  grid-template-columns: repeat(2, max-content);
+  gap: 2rem 8rem;
+  justify-content: center;
+  justify-items: start;
+}
+
+.tocItem {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.tocItem:hover {
+  opacity: 0.7;
+}
+
+.tocNumber {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.tocLabel {
+  color: white;
+  font-size: 1rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+}
+
+.tryButton {
+  margin-top: 0.75rem;
+  width: fit-content;
+  padding: 0.45rem 1.2rem;
+  border-radius: 0.4rem;
+  background-color: var(--color-brown);
+  color: var(--color-cream);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: opacity 0.2s ease;
+}
+
+.tryButton:hover {
+  opacity: 0.8;
+}
+
+.contentSection {
+  background-color: #f9f9f9;
+  padding: 4rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  scroll-margin-top: 100px;
+}
+
+.sectionHeader {
+  width: min(92vw, 60rem);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 2px solid #000;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  letter-spacing: 0.05em;
+  color: #000;
+}
+
+.sectionNumber {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 0.8;
+  color: #000;
+}
+
+.sectionContent {
+  width: min(92vw, 60rem);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.2rem;
+  align-items: center;
+}
+
+.textCol {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.textCol p,
+.sectionContent > p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.subheading {
+  font-size: 1.65rem;
+  color: var(--color-brown);
+  font-weight: 700;
+}
+
+.sectionImage {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+.gameImage {
+  max-width: 26rem;
+  justify-self: end;
+}
+
+.vsCards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.vsCards img {
+  width: clamp(7rem, 24vw, 12rem);
+  height: auto;
+}
+
+.vsCards span {
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  color: #000;
+}
+
+.finalCol {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+@media (max-width: 900px) {
+  .headerContent,
+  .sectionContent {
+    grid-template-columns: 1fr;
+  }
+
+  .gameImage {
+    max-width: 100%;
+    justify-self: start;
+  }
+
+  .header {
+    padding: 9.5rem 1.5rem 4rem;
+  }
+
+  .title {
+    font-size: 3.2rem;
+  }
+
+  .description {
+    max-width: none;
+  }
+
+  .tocGrid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    justify-items: start;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding-top: 8.9rem;
+  }
+
+  .subheading {
+    font-size: 1.2rem;
+  }
+}

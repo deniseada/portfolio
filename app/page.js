@@ -47,7 +47,7 @@ export default function Home() {
                 href="mailto:deniseaquino011@gmail.com"
               >
                 <img
-                  src="/mail.svg"
+                  src="/icons/mail.svg"
                   alt="Email"
                   width="24"
                   height="24"
@@ -57,7 +57,7 @@ export default function Home() {
               </a>
               <a className={styles.heroLink} href="https://linkedin.com">
                 <img
-                  src="/linkedin.svg"
+                  src="/icons/linkedin.svg"
                   alt="LinkedIn"
                   width="24"
                   height="24"
@@ -67,7 +67,7 @@ export default function Home() {
               </a>
               <a className={styles.heroLink} href="https://github.com">
                 <img
-                  src="/github.svg"
+                  src="/icons/github.svg"
                   alt="GitHub"
                   width="24"
                   height="24"

@@ -28,8 +28,8 @@ export default function CowAdPage() {
                 combine three animals into one new creature. I chose a cow, a
                 swan, and a Bengal tiger and turned the concept into a milk
                 advertisement. While compositing the animals together in
-                Photoshop, I decided to place the creature in the sky. The
-                scene felt empty, so I added a glass of milk to complete the
+                Photoshop, I decided to place the creature in the sky. The scene
+                felt empty, so I added a glass of milk to complete the
                 composition and strengthen the concept.
               </p>
 
@@ -75,7 +75,9 @@ export default function CowAdPage() {
                   className={styles.projectImage}
                 />
                 <div className={styles.projectOverlay}>
-                  <span className={styles.projectOverlayText}>VIEW PROJECT</span>
+                  <span className={styles.projectOverlayText}>
+                    VIEW PROJECT
+                  </span>
                 </div>
               </article>
             </Link>

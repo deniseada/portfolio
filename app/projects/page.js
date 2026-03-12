@@ -58,6 +58,7 @@ export default function Projects() {
       title: "Rock Paper Scissors Game",
       category: "web",
       image: "/project-mockup/landing-page.png",
+      slug: "rps",
     },
     {
       title: "Spotify Promo Video",
