@@ -86,6 +86,7 @@ export default function Projects() {
       title: "LendItOut",
       category: ["ux", "web"],
       image: "/case-study/lenditout/lenditout-phones.png",
+      slug: "lenditout",
     },
   ];
 
