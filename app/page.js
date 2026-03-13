@@ -87,21 +87,27 @@ export default function Home() {
             <FeatureCard
               eyebrow="GOT IT"
               title="AI Powered Study Tool"
-              body="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
+              body="A focused study workspace with a pomodoro timer, notes, and AI assistance designed to keep students organized and reduce context switching."
               buttonText="Try It Now!"
+              href="/projects/got-it"
+              image="/case-study/got-it/gotit-brochure.jpg"
             />
             <FeatureCard
-              eyebrow="GOT IT"
-              title="AI Powered Study Tool"
-              body="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
-              buttonText="Try It Now!"
+              eyebrow="ROCK PAPER SCISSORS"
+              title="Interactive JavaScript Game"
+              body="A browser game project built with core JavaScript logic, randomized outcomes, score tracking, and a polished visual system inspired by card battles."
+              buttonText="Play The Project"
+              href="/projects/rps"
+              image="/case-study/rps/landing-page.png"
               flipped={true}
             />
             <FeatureCard
-              eyebrow="E-ADVERT"
-              title="Japan Tour Magazine"
-              body="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
-              buttonText="View More Pages"
+              eyebrow="LENDITOUT"
+              title="Community Rental App"
+              body="A UX/UI project for a marketplace-style rental platform that simplifies posting, browsing, and trust-building through clearer user flows."
+              buttonText="View Case Study"
+              href="/projects/lenditout"
+              image="/case-study/lenditout/lenditout-phones.png"
             />
           </div>
           <div className={styles.featuredFooter}>

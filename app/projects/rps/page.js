@@ -1,11 +1,34 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import NavBar from "../../../ui/nav-bar/page";
 import Footer from "../../../ui/footer/page";
 import Waves from "../../../ui/waves/Waves";
 import styles from "./rps.module.css";
 
 export default function RpsCaseStudy() {
+  const [showScrollButton, setShowScrollButton] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const header = document.querySelector(`.${styles.header}`);
+      if (!header) {
+        setShowScrollButton(window.scrollY > 0);
+        return;
+      }
+
+      const headerBottom = header.getBoundingClientRect().bottom;
+      setShowScrollButton(headerBottom <= 0);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToHeader = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <div className={styles.page}>
       <NavBar />
@@ -26,7 +49,7 @@ export default function RpsCaseStudy() {
           />
           <div className={styles.headerContent}>
             <div className={styles.headerLeft}>
-              <span className={styles.badge}>JAVASCRIPT DEVELOPER</span>
+              <span className={styles.badge}>WEB DEVELOPMENT</span>
               <h1 className={styles.title}>
                 ROCK,PAPER,
                 <br />
@@ -216,6 +239,13 @@ export default function RpsCaseStudy() {
         </div>
       </main>
       <Footer />
+      <button
+        className={`${styles.scrollToTopButton} ${showScrollButton ? styles.visible : styles.hidden}`}
+        onClick={scrollToHeader}
+        aria-label="Scroll to header"
+      >
+        ↑
+      </button>
     </div>
   );
 }

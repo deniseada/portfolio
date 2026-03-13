@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import styles from "./feature-card.module.css";
 
 const defaultBody =
@@ -7,12 +8,16 @@ const defaultBody =
 const defaultEyebrow = "Got It, an AI Powered Study Tool";
 const defaultTitle = "This Is What Studying Looks Like With AI";
 const defaultButtonText = "Try It Now!";
+const defaultHref = "/projects";
+const defaultImage = "/case-study/got-it/gotit-laptop.png";
 
 export default function FeatureCard({
   body = defaultBody,
   eyebrow = defaultEyebrow,
   title = defaultTitle,
   buttonText = defaultButtonText,
+  href = defaultHref,
+  image = defaultImage,
   flipped = false,
 }) {
   return (
@@ -21,11 +26,15 @@ export default function FeatureCard({
         <p className={styles.eyebrow}>{eyebrow}</p>
         <h2 className={styles.heroTitle}>{title}</h2>
         <p className={styles.heroBody}>{body}</p>
-        <button className={styles.heroButton} type="button">
+        <Link className={styles.heroButton} href={href}>
           {buttonText}
-        </button>
+        </Link>
       </div>
-      <div className={styles.img} aria-hidden="true" />
+      <div
+        className={styles.img}
+        aria-hidden="true"
+        style={{ backgroundImage: `url(${image})` }}
+      />
     </section>
   );
 }

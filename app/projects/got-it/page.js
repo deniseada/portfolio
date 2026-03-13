@@ -40,7 +40,7 @@ export default function GotItCaseStudy() {
           />
           <div className={styles.headerContent}>
             <div className={styles.headerLeft}>
-              <span className={styles.badge}>FRONT-END DEVELOPER</span>
+              <span className={styles.badge}>WEB DEVELOPMENT</span>
               <h1 className={styles.title}>GOT IT</h1>
               <h2 className={styles.subtitle}>
                 This Is What Studying Looks Like With AI
