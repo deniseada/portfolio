@@ -150,7 +150,82 @@ export default function RpsCaseStudy() {
                 focused on making the interactions clear, so when it came to the
                 development phase I understood how the logic would work.
               </p>
-              <h3 className={styles.subheading}>Assets</h3>
+            </div>
+            <div className={styles.assetsBoard}>
+              <div className={styles.assetsLeftCol}>
+                <h3 className={styles.assetsTitle}>Assets</h3>
+                <div className={styles.assetsGroup}>
+                  <h4>Enemy Cards</h4>
+                  <div className={styles.assetsCardsRow}>
+                    <img
+                      src="/case-study/rps/rock-red.png"
+                      alt="Enemy rock card"
+                    />
+                    <img
+                      src="/case-study/rps/paper-red.png"
+                      alt="Enemy paper card"
+                    />
+                    <img
+                      src="/case-study/rps/scissors-red.png"
+                      alt="Enemy scissors card"
+                    />
+                  </div>
+                </div>
+                <div className={styles.assetsGroup}>
+                  <h4>Player Cards</h4>
+                  <div className={styles.assetsCardsRow}>
+                    <img
+                      src="/case-study/rps/rock-blue.png"
+                      alt="Player rock card"
+                    />
+                    <img
+                      src="/case-study/rps/paper-blue.png"
+                      alt="Player paper card"
+                    />
+                    <img
+                      src="/case-study/rps/scissors-blue.png"
+                      alt="Player scissors card"
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className={styles.assetsOverlayCol}>
+                <img
+                  src="/case-study/rps/you-lose-overlay.png"
+                  alt="You lose overlay"
+                />
+                <img
+                  src="/case-study/rps/you-win-overlay.png"
+                  alt="You win overlay"
+                />
+              </div>
+
+              <div className={styles.assetsRightCol}>
+                <img
+                  src="/case-study/rps/pause-card.png"
+                  alt="Pause game card"
+                  className={styles.pauseCardPreview}
+                />
+                <div className={styles.pointsPreview}>
+                  <h4>Player Points</h4>
+                  <div className={styles.starsPreview}>
+                    <img
+                      src="/case-study/rps/uncoloured-star.png"
+                      alt="Uncolored point star"
+                    />
+                    <img
+                      src="/case-study/rps/coloured-star.png"
+                      alt="Colored point star"
+                    />
+                  </div>
+                  <img
+                    src="/case-study/rps/card-deck.png"
+                    alt="Card deck"
+                    className={styles.deckPreview}
+                  />
+                </div>
+              </div>
             </div>
           </section>
 

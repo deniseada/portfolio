@@ -1,19 +1,38 @@
 .card {
-  background: #efebe4;
-  padding: 1.6rem 1.8rem;
-  border-left: 4px solid var(--color-brown);
-  box-shadow: 0 12px 22px rgba(20, 16, 11, 0.12);
+  background: rgba(255, 255, 255, 0.82);
+  padding: 1.5rem;
+  border: 1px solid rgba(59, 53, 42, 0.1);
+  box-shadow: 0 18px 30px rgba(20, 16, 11, 0.08);
+}
+
+.topRow {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1rem;
+  align-items: start;
+}
+
+.index {
+  display: grid;
+  place-items: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 999px;
+  background: #2f2a21;
+  color: #f5f2ea;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
 }
 
 .header {
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
-  margin-bottom: 0.65rem;
 }
 
 .title {
-  font-size: 1.15rem;
+  font-size: 1.2rem;
   font-weight: 700;
   color: var(--color-slate);
 }
@@ -35,6 +54,23 @@
   font-weight: 600;
 }
 
+.focusRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+  margin: 1rem 0 0.95rem;
+}
+
+.focusTag {
+  padding: 0.38rem 0.65rem;
+  background: rgba(244, 241, 234, 0.95);
+  border: 1px solid rgba(59, 53, 42, 0.08);
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: rgba(59, 53, 42, 0.74);
+}
+
 .list {
   display: grid;
   gap: 0.5rem;
@@ -43,4 +79,5 @@
   line-height: 1.6;
   padding-left: 1.3rem;
   list-style: disc;
+  margin-top: 0;
 }

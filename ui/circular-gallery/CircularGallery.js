@@ -44,7 +44,9 @@ function createTextTexture(
   context.font = font;
   const metrics = context.measureText(text);
   const textWidth = Math.ceil(metrics.width);
-  const textHeight = Math.ceil(parseInt(font, 10) * 1.2);
+  const fontSizeMatch = font.match(/(\d+(?:\.\d+)?)px/);
+  const fontSize = fontSizeMatch ? Number(fontSizeMatch[1]) : 30;
+  const textHeight = Math.ceil(fontSize * 1.2);
   canvas.width = textWidth + 20;
   canvas.height = textHeight + 20;
   context.font = font;
@@ -56,6 +58,37 @@ function createTextTexture(
   const texture = new Texture(gl, { generateMipmaps: false });
   texture.image = canvas;
   return { texture, width: canvas.width, height: canvas.height };
+}
+
+function createBadgeTexture(
+  gl,
+  label,
+  bgColor = "#6b4a34",
+  textColor = "#f5f1ed",
+) {
+  const size = 256;
+  const canvas = document.createElement("canvas");
+  const context = canvas.getContext("2d");
+  canvas.width = size;
+  canvas.height = size;
+
+  const center = size / 2;
+  const radius = size * 0.38;
+  context.clearRect(0, 0, size, size);
+  context.beginPath();
+  context.arc(center, center, radius, 0, Math.PI * 2);
+  context.fillStyle = bgColor;
+  context.fill();
+
+  context.font = "700 92px Jost, sans-serif";
+  context.fillStyle = textColor;
+  context.textBaseline = "middle";
+  context.textAlign = "center";
+  context.fillText(label, center, center + 4);
+
+  const texture = new Texture(gl, { generateMipmaps: false });
+  texture.image = canvas;
+  return texture;
 }
 
 class Title {
@@ -79,7 +112,7 @@ class Title {
   createMesh() {
     const { texture, width, height } = createTextTexture(
       this.gl,
-      this.text,
+      this.text.toUpperCase(),
       this.font,
       this.textColor,
     );
@@ -132,6 +165,8 @@ class Media {
     text,
     viewport,
     bend,
+    hobbyCode = "01",
+    waveIntensity = 0,
     textColor,
     borderRadius = 0,
     font,
@@ -148,12 +183,15 @@ class Media {
     this.text = text;
     this.viewport = viewport;
     this.bend = bend;
+    this.hobbyCode = hobbyCode;
+    this.waveIntensity = waveIntensity;
     this.textColor = textColor;
     this.borderRadius = borderRadius;
     this.font = font;
     this.createShader();
     this.createMesh();
     this.createTitle();
+    this.createBadge();
     this.onResize();
   }
   createShader() {
@@ -168,12 +206,12 @@ class Media {
         uniform mat4 modelViewMatrix;
         uniform mat4 projectionMatrix;
         uniform float uTime;
-        uniform float uSpeed;
+        uniform float uWaveIntensity;
         varying vec2 vUv;
         void main() {
           vUv = uv;
           vec3 p = position;
-          p.z = (sin(p.x * 4.0 + uTime) * 1.5 + cos(p.y * 2.0 + uTime) * 1.5) * (0.1 + uSpeed * 0.5);
+          p.z = (sin(p.x * 4.0 + uTime) * 1.5 + cos(p.y * 2.0 + uTime) * 1.5) * uWaveIntensity;
           gl_Position = projectionMatrix * modelViewMatrix * vec4(p, 1.0);
         }
       `,
@@ -212,7 +250,7 @@ class Media {
         tMap: { value: texture },
         uPlaneSizes: { value: [0, 0] },
         uImageSizes: { value: [0, 0] },
-        uSpeed: { value: 0 },
+        uWaveIntensity: { value: this.waveIntensity },
         uTime: { value: 100 * Math.random() },
         uBorderRadius: { value: this.borderRadius },
       },
@@ -243,8 +281,45 @@ class Media {
       renderer: this.renderer,
       text: this.text,
       textColor: this.textColor,
-      fontFamily: this.font,
+      font: this.font,
     });
+  }
+  createBadge() {
+    const geometry = new Plane(this.gl);
+    const badgeTexture = createBadgeTexture(this.gl, this.hobbyCode);
+    const program = new Program(this.gl, {
+      vertex: `
+        attribute vec3 position;
+        attribute vec2 uv;
+        uniform mat4 modelViewMatrix;
+        uniform mat4 projectionMatrix;
+        varying vec2 vUv;
+        void main() {
+          vUv = uv;
+          gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+        }
+      `,
+      fragment: `
+        precision highp float;
+        uniform sampler2D tMap;
+        varying vec2 vUv;
+        void main() {
+          vec4 color = texture2D(tMap, vUv);
+          if (color.a < 0.1) discard;
+          gl_FragColor = color;
+        }
+      `,
+      uniforms: { tMap: { value: badgeTexture } },
+      transparent: true,
+    });
+
+    this.badge = new Mesh(this.gl, { geometry, program });
+    const badgeSize = this.plane.scale.y * 0.18;
+    const scaleCompensation = this.plane.scale.y / this.plane.scale.x;
+    this.badge.scale.set(badgeSize * scaleCompensation, badgeSize, 1);
+    this.badge.position.y =
+      this.title.mesh.position.y - this.title.mesh.scale.y * 1.1;
+    this.badge.setParent(this.plane);
   }
   update(scroll, direction) {
     this.plane.position.x = this.x - scroll.current - this.extra;
@@ -266,9 +341,7 @@ class Media {
         this.plane.rotation.z = Math.sign(x) * Math.asin(effectiveX / R);
       }
     }
-    this.speed = scroll.current - scroll.last;
     this.program.uniforms.uTime.value += 0.04;
-    this.program.uniforms.uSpeed.value = this.speed;
     const planeOffset = this.plane.scale.x / 2;
     const viewportOffset = this.viewport.width / 2;
     this.isBefore = this.plane.position.x + planeOffset < -viewportOffset;
@@ -315,6 +388,7 @@ class App {
     {
       items,
       bend,
+      waveIntensity = 0,
       textColor = "#ffffff",
       borderRadius = 0,
       font = "bold 30px Figtree",
@@ -332,7 +406,14 @@ class App {
     this.createScene();
     this.onResize();
     this.createGeometry();
-    this.createMedias(items, bend, textColor, borderRadius, font);
+    this.createMedias(
+      items,
+      bend,
+      waveIntensity,
+      textColor,
+      borderRadius,
+      font,
+    );
     this.update();
     this.addEventListeners();
   }
@@ -360,7 +441,14 @@ class App {
       widthSegments: 100,
     });
   }
-  createMedias(items, bend = 1, textColor, borderRadius, font) {
+  createMedias(
+    items,
+    bend = 1,
+    waveIntensity = 0,
+    textColor,
+    borderRadius,
+    font,
+  ) {
     const defaultItems = [
       { image: "https://picsum.photos/seed/1/800/600", text: "Bridge" },
       { image: "https://picsum.photos/seed/2/800/600", text: "Desk Setup" },
@@ -388,8 +476,10 @@ class App {
         scene: this.scene,
         screen: this.screen,
         text: data.text,
+        hobbyCode: data.hobbyCode,
         viewport: this.viewport,
         bend,
+        waveIntensity,
         textColor,
         borderRadius,
         font,
@@ -495,6 +585,7 @@ class App {
 export default function CircularGallery({
   items,
   bend = 3,
+  waveIntensity = 0,
   textColor = "#ffffff",
   borderRadius = 0.05,
   font = "bold 30px Figtree",
@@ -506,6 +597,7 @@ export default function CircularGallery({
     const app = new App(containerRef.current, {
       items,
       bend,
+      waveIntensity,
       textColor,
       borderRadius,
       font,
@@ -515,6 +607,15 @@ export default function CircularGallery({
     return () => {
       app.destroy();
     };
-  }, [items, bend, textColor, borderRadius, font, scrollSpeed, scrollEase]);
+  }, [
+    items,
+    bend,
+    waveIntensity,
+    textColor,
+    borderRadius,
+    font,
+    scrollSpeed,
+    scrollEase,
+  ]);
   return <div className="circular-gallery" ref={containerRef} />;
 }
