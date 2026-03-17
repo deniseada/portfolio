@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import NavBar from "../../../ui/nav-bar/page";
 import Footer from "../../../ui/footer/page";
 import FloatingLines from "../../../ui/floating-lines/FloatingLines";
+import GoogleDriveVideo from "../../../ui/google-drive-video/page";
 import styles from "./case-study.module.css";
 
 export default function GotItCaseStudy() {
@@ -447,10 +448,9 @@ export default function GotItCaseStudy() {
             </div>
             <div className={styles.sectionContent}>
               <div className={styles.videoContainer}>
-                <img
-                  src="/case-study/got-it/gotit-brochure.jpg"
-                  alt="Promo video"
-                  className={styles.promoVideo}
+                <GoogleDriveVideo
+                  fileId="1p_UiIPO0JIgpV5PPGGjbZFHa9rPTtsji"
+                  title="Got It Promo Video"
                 />
               </div>
             </div>

@@ -618,12 +618,11 @@
 
 /* Section 06: Promo Video */
 .videoContainer {
-  width: 100%;
+  width: min(92vw, 60rem);
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #f0f0f0;
-  padding: 2rem;
+  aspect-ratio: 16 / 9;
 }
 
 .promoVideo {
