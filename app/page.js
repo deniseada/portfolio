@@ -88,7 +88,7 @@ export default function Home() {
               eyebrow="GOT IT"
               title="AI Powered Study Tool"
               body="A focused study workspace with a pomodoro timer, notes, and AI assistance designed to keep students organized and reduce context switching."
-              buttonText="Try It Now!"
+              buttonText="View Case Study"
               href="/projects/got-it"
               image="/case-study/got-it/gotit-brochure.jpg"
             />
@@ -96,7 +96,7 @@ export default function Home() {
               eyebrow="ROCK PAPER SCISSORS"
               title="Interactive JavaScript Game"
               body="A browser game project built with core JavaScript logic, randomized outcomes, score tracking, and a polished visual system inspired by card battles."
-              buttonText="Play The Project"
+              buttonText="View Case Study"
               href="/projects/rps"
               image="/case-study/rps/landing-page.png"
               flipped={true}

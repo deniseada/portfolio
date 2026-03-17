@@ -9,10 +9,34 @@ export default function CowAdPage() {
       <NavBar />
       <main className={styles.main}>
         <section className={styles.heroSection}>
-          <h1 className={styles.title}>DIFFERENT BREED MILK</h1>
-          <p className={styles.subtitle}>GRAPHIC DESIGN / AD DESIGN</p>
+          <div className={styles.showcaseFrame}>
+            <div className={styles.showcaseContent}>
+              <span className={styles.showcaseBadge}>Graphic Design</span>
+              <h1 className={styles.title}>Different Breed milk</h1>
+              <span className={styles.showcaseBadge}>Inspiration</span>
 
-          <div className={styles.heroContent}>
+              <p className={styles.bodyText}>
+                This milk ad was created for an assignment where we had to
+                combine three animals into one new creature. I chose a cow, a
+                swan, and a Bengal tiger and turned the concept into a milk
+                advertisement.
+              </p>
+              <p className={styles.bodyText}>
+                While compositing the animals together in Photoshop, I decided
+                to place the creature in the sky. The scene felt empty, so I
+                added a glass of milk to complete the composition and strengthen
+                the concept.
+              </p>
+              <div className={styles.showcaseMeta}>
+                <div className={styles.showcaseMetaItem}>
+                  <span className={styles.showcaseMetaLabel}>Tool</span>
+                  <span className={styles.showcaseMetaValue}>
+                    Adobe Photoshop
+                  </span>
+                </div>
+              </div>
+            </div>
+
             <div className={styles.heroImageWrap}>
               <img
                 src="/project-images/milk-poster.png"
@@ -20,31 +44,14 @@ export default function CowAdPage() {
                 className={styles.heroImage}
               />
             </div>
-
-            <aside className={styles.sideContent}>
-              <h2 className={styles.sectionHeading}>Inspiration:</h2>
-              <p className={styles.bodyText}>
-                This milk ad was created for an assignment where we had to
-                combine three animals into one new creature. I chose a cow, a
-                swan, and a Bengal tiger and turned the concept into a milk
-                advertisement. While compositing the animals together in
-                Photoshop, I decided to place the creature in the sky. The scene
-                felt empty, so I added a glass of milk to complete the
-                composition and strengthen the concept.
-              </p>
-
-              <h3 className={styles.toolsHeading}>Tools Used</h3>
-              <div className={styles.toolBadge} aria-label="Photoshop">
-                Ps
-              </div>
-            </aside>
           </div>
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>
-            ANIMALS USED <span>(NO ANIMAL WAS HARMED)</span>
-          </h2>
+          <div className={styles.sectionHeadingRow}>
+            <h2 className={styles.sectionTitle}>Animals Used</h2>
+            <span className={styles.sectionNote}>(No animal was harmed)</span>
+          </div>
           <div className={styles.threeGrid}>
             <img
               src="/project-images/cow.jpg"
@@ -65,7 +72,7 @@ export default function CowAdPage() {
         </section>
 
         <section className={styles.section}>
-          <h2 className={styles.sectionTitle}>CHECK OUT MY OTHER WORK!</h2>
+          <h2 className={styles.sectionTitle}>Check Out My Other Work</h2>
           <div className={styles.projectGrid}>
             <Link href="/projects/got-it" className={styles.projectLink}>
               <article className={styles.projectCard}>

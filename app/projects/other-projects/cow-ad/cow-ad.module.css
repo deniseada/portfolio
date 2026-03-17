@@ -1,14 +1,14 @@
 .page {
   min-height: 100vh;
-  background-color: var(--color-cream);
+  background-color: #f9f9f9;
   display: flex;
   flex-direction: column;
 }
 
 .main {
-  width: min(92vw, 64rem);
+  width: min(98vw, 66rem);
   margin: 0 auto;
-  padding: 10.5rem 0 5rem;
+  padding: 8.5rem 0 5rem;
   display: flex;
   flex-direction: column;
   gap: 4rem;
@@ -16,32 +16,31 @@
 }
 
 .heroSection {
+  display: block;
+}
+
+.showcaseFrame {
+  display: grid;
+  grid-template-columns: minmax(22rem, 0.9fr) minmax(0, 1.35fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.showcaseContent {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 1.5rem;
+  color: #131019;
 }
 
-.title {
-  text-align: center;
-  color: var(--color-ink);
-  font-size: clamp(2.2rem, 6vw, 4.2rem);
-  letter-spacing: 0.06rem;
-  font-weight: 700;
-}
-
-.subtitle {
-  text-align: center;
-  color: var(--color-ink);
-  font-size: clamp(1rem, 2.1vw, 2rem);
-  letter-spacing: 0.03rem;
-  font-weight: 700;
-}
-
-.heroContent {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: 2rem;
-  align-items: start;
+.showcaseBadge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(19, 16, 25, 0.7);
 }
 
 .heroImageWrap {
@@ -55,63 +54,90 @@
   object-fit: cover;
 }
 
-.sideContent {
+.bodyText {
+  font-size: 0.88rem;
+  line-height: 1.7;
+  margin: 0;
+  max-width: 62ch;
+  color: rgba(19, 16, 25, 0.86);
+}
+
+.title {
+  margin: 0;
+  color: #131019;
+  font-size: clamp(2.2rem, 5vw, 4rem);
+  line-height: 1.02;
+  letter-spacing: 0.01em;
+  font-weight: 500;
+  font-family: serif;
+}
+
+.showcaseMeta {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+  padding-top: 0.5rem;
+}
+
+.showcaseMetaItem {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
-  color: var(--color-ink);
+  gap: 0.3rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(19, 16, 25, 0.12);
 }
 
-.sectionHeading {
-  font-size: 2rem;
-  font-weight: 700;
-}
-
-.bodyText {
-  font-size: 0.95rem;
-  line-height: 1.8;
-  max-width: 35ch;
-}
-
-.toolsHeading {
-  font-size: 2.1rem;
-  font-weight: 700;
-}
-
-.toolBadge {
-  width: 5.5rem;
-  height: 5.5rem;
-  border-radius: 1rem;
-  background-color: var(--color-slate);
-  color: var(--color-white);
-  display: grid;
-  place-items: center;
-  font-size: 2.6rem;
+.showcaseMetaLabel {
+  font-size: 0.68rem;
   font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(19, 16, 25, 0.6);
+}
+
+.showcaseMetaValue {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #131019;
 }
 
 .section {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.2rem;
 }
 
 .sectionTitle {
-  color: var(--color-ink);
-  font-size: 1.9rem;
-  font-weight: 700;
-  letter-spacing: 0.03rem;
+  color: #131019;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 1.05;
+  letter-spacing: 0.01em;
+  font-family: serif;
+  margin: 0;
 }
 
-.sectionTitle span {
-  font-size: 1.25rem;
+.sectionHeadingRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(19, 16, 25, 0.14);
+}
+
+.sectionNote {
+  font-size: 0.75rem;
   font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(19, 16, 25, 0.6);
 }
 
 .threeGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .gridImage {
@@ -119,12 +145,13 @@
   height: 13.5rem;
   object-fit: cover;
   display: block;
+  border-radius: 0.25rem;
 }
 
 .projectGrid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 1rem;
+  gap: 1.25rem;
 }
 
 .projectLink {
@@ -137,6 +164,7 @@
   position: relative;
   aspect-ratio: 1 / 1;
   overflow: hidden;
+  background-color: #fff;
 }
 
 .projectImage {
@@ -181,15 +209,24 @@
 @media (max-width: 900px) {
   .main {
     gap: 3rem;
-    padding-top: 9.5rem;
+    padding-top: 7.5rem;
   }
 
-  .heroContent {
+  .showcaseFrame {
     grid-template-columns: 1fr;
   }
 
   .bodyText {
     max-width: none;
+  }
+
+  .showcaseContent {
+    padding: 1rem 0 0;
+  }
+
+  .sectionHeadingRow {
+    flex-direction: column;
+    align-items: start;
   }
 }
 
