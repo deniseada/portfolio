@@ -65,6 +65,7 @@ export default function Projects() {
       category: "Motion Graphics",
       wide: true,
       image: "/project-mockup/spotify.png",
+      slug: "other-projects/spotify",
     },
 
     {

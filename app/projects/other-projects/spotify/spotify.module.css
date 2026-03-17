@@ -1,0 +1,109 @@
+.page {
+  min-height: 100vh;
+  background-color: #f9f9f9;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.videoSection {
+  background-color: #f9f9f9;
+  padding: 8.5rem 1rem 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.showcaseFrame {
+  width: min(96vw, 64rem);
+  display: grid;
+  grid-template-columns: minmax(14rem, 0.55fr) minmax(0, 1.75fr);
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.videoContainer {
+  width: 100%;
+  min-width: 0;
+  background-color: transparent;
+}
+
+.showcaseContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  padding: 2rem 1.5rem;
+  color: #131019;
+}
+
+.showcaseBadge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(19, 16, 25, 0.7);
+}
+
+.showcaseTitle {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.05;
+  font-weight: 500;
+  font-family: serif;
+}
+
+.showcaseText {
+  margin: 0;
+  font-size: 0.88rem;
+  line-height: 1.7;
+  color: rgba(19, 16, 25, 0.86);
+}
+
+.showcaseMeta {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.9rem;
+  padding-top: 0.5rem;
+}
+
+.showcaseMetaItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding-top: 0.9rem;
+  border-top: 1px solid rgba(19, 16, 25, 0.12);
+}
+
+.showcaseMetaLabel {
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(19, 16, 25, 0.6);
+}
+
+.showcaseMetaValue {
+  font-size: 0.92rem;
+  line-height: 1.5;
+  color: #131019;
+}
+
+@media (max-width: 900px) {
+  .showcaseFrame {
+    grid-template-columns: 1fr;
+  }
+
+  .showcaseContent {
+    padding: 2rem 1.5rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .videoSection {
+    padding: 7.5rem 1rem 3rem;
+  }
+}
