@@ -90,10 +90,6 @@ export default function LendItOutCaseStudy() {
                 <span className={styles.tocNavNumber}>05</span>
                 <span className={styles.tocNavLabel}>FINAL PRODUCT</span>
               </a>
-              <a href="#section-06" className={styles.tocNavItem}>
-                <span className={styles.tocNavNumber}>06</span>
-                <span className={styles.tocNavLabel}>PROMO VIDEO</span>
-              </a>
             </nav>
           </aside>
 
@@ -263,14 +259,6 @@ export default function LendItOutCaseStudy() {
                 </a>
               </div>
             </div>
-          </section>
-
-          <section id="section-06" className={styles.contentSection}>
-            <div className={styles.sectionHeader}>
-              <h2 className={styles.sectionTitle}>PROMO VIDEO</h2>
-              <span className={styles.sectionNumber}>06</span>
-            </div>
-            <div className={styles.sectionContentSingle}></div>
           </section>
         </div>
       </main>
