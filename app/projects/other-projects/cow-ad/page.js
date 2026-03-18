@@ -12,7 +12,7 @@ export default function CowAdPage() {
           <div className={styles.showcaseFrame}>
             <div className={styles.showcaseContent}>
               <span className={styles.showcaseBadge}>Graphic Design</span>
-              <h1 className={styles.title}>Different Breed milk</h1>
+              <h1 className={styles.title}>Different Breed Milk</h1>
               <span className={styles.showcaseBadge}>Inspiration</span>
 
               <p className={styles.bodyText}>
