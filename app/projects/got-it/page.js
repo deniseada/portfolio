@@ -344,10 +344,13 @@ export default function GotItCaseStudy() {
             </div>
             <div className={styles.sectionContent}>
               <p className={styles.developmentIntro}>
-                During the development process I had very robust, the plan was
-                to use Next.JS, React, API, and authentication. I then used
-                Tailwind CSS for UI and developed the MVP. It went pretty smooth
-                overall building the application.
+                During the coding phase, I implemented the PDF viewer and a
+                toolbar that is able to change the state of the PDF and AI
+                summarization. Users were able to highlight text in the PDF for
+                later reference, upload and download the PDF. I made sure the
+                design was responsive and clean UI behaviour, integrating this
+                was one of our key features that supports the app's function and
+                accessibility.
               </p>
 
               <div className={styles.techStack}>
@@ -384,16 +387,13 @@ export default function GotItCaseStudy() {
                 <h3 className={styles.challengesTitle}>Challenges</h3>
                 <p>
                   One of the main challenges I came across was implementing the
-                  authentication of a logged in student as well as database. I
-                  came across time consuming work because for this project, I
-                  wanted the website to have a functioning API endpoint straight
-                  up to GPT. I'm new learning Next.js, but it was fun and
-                  challenging at the same time.
+                  functionalities of a toolbar to our own custom one and have it
+                  interaction and control the PDF viewer's state.
                 </p>
                 <p>
                   Overcoming this challenge helped strengthen my understanding
-                  of API implementation, authentication flows, and Next.js
-                  development patterns.
+                  on component communication and debugging third-party library
+                  limitations.
                 </p>
               </div>
             </div>
