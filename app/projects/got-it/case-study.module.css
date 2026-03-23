@@ -683,10 +683,21 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .header {
+    min-height: auto;
+    padding: 7.5rem 1rem 4rem;
+  }
+
   .headerContent {
     grid-template-columns: 1fr;
     gap: 2rem;
     transform: none;
+    width: min(100%, 34rem);
+  }
+
+  .headerRight {
+    align-self: start;
+    gap: 1.5rem;
   }
 
   .contentWrapper {
@@ -704,16 +715,40 @@
     border-right: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.08);
     padding: 1.5rem 1rem;
+    display: flex;
+    justify-content: center;
   }
 
   .tocNav {
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 0.5rem;
+    width: min(100%, 24rem);
+  }
+
+  .tocNavTitle {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .tocNavItem {
+    width: 100%;
+    justify-content: center;
   }
 
   .tocGrid {
     grid-template-columns: 1fr;
+  }
+
+  .contentSection {
+    padding: 3rem 1rem;
+  }
+
+  .sectionHeader {
+    width: 100%;
+    align-items: flex-end;
+    gap: 0.75rem;
   }
 
   .sectionContent > div,
@@ -721,6 +756,10 @@
   .comparisonGrid,
   .finalGrid {
     grid-template-columns: 1fr;
+  }
+
+  .beforeAfter {
+    flex-direction: column;
   }
 
   .sectionNumber {
@@ -737,5 +776,9 @@
     width: 45px;
     height: 45px;
     font-size: 1.2rem;
+  }
+
+  .videoContainer {
+    padding: 1rem;
   }
 }

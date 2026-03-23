@@ -162,24 +162,20 @@ export default function GotItCaseStudy() {
                 <div className={styles.researchColumn}>
                   <h3 className={styles.subsectionTitle}>Approach</h3>
                   <p>
-                    After a brief ideation, I decided we need to ask the
-                    developers in mind based on user research. Since the target
-                    demographic for my project are university students, I
-                    conducted a poll on students to learn specifically to the
-                    needs of researchers primarily.
+                    While my primary role was more on the development side, I
+                    supported research by contributing to asking intuitive
+                    questions in our survey which helped our team design
+                    specifically to fill the needs of neurodiverse learning.
                   </p>
-                  <h4 className={styles.questionTitle}>Questions(8)</h4>
-                  <ul className={styles.questionList}>
-                    <li>
-                      A common need was found: with something between the
-                      study's space, or another app is most difficult.
-                    </li>
-                    <li>
-                      Users desired simple, modern study materials and quick and
-                      on their terms. Understanding that making applications to
-                      design the website to be at simple as possible.
-                    </li>
-                  </ul>
+                  <h3 className={styles.subsectionTitle}>Research analysis:</h3>
+                  <p>
+                    A common trend was found, with identifying barriers for
+                    neurodiverse individuals, which is the feeling of overwhelm
+                    with text density and poor visual hierarchy, caused by an
+                    increased cognitive load. This research helped us design the
+                    website to be as simple as possible to accommodate their
+                    needs.
+                  </p>
                 </div>
                 <div className={styles.researchColumn}>
                   <h3 className={styles.subsectionTitle}>Survey Results</h3>
