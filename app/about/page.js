@@ -2,137 +2,21 @@
 
 import NavBar from "../../ui/nav-bar/page";
 import Footer from "../../ui/footer/page";
-import CircularGallery from "../../ui/circular-gallery/CircularGallery";
+import HobbiesCard from "../../ui/hobbies-card/page";
 import ExperienceCard from "../../ui/experience-card/page";
 import styles from "./about.module.css";
 
 export default function About() {
-  const skillGroups = [
-    {
-      id: "programming",
-      label: "Programming",
-      items: ["HTML", "CSS", "JavaScript", "React", "Next.js"],
-    },
-    {
-      id: "tools",
-      label: "Software + Tools",
-      items: [
-        "Figma",
-        "Adobe Illustrator",
-        "VS Code",
-        "Git + GitHub",
-        "After Effects",
-      ],
-    },
-    {
-      id: "strengths",
-      label: "Strengths",
-      items: [
-        "Accessible UI",
-        "Design Systems",
-        "Team Collaboration",
-        "Problem Solving",
-        "Attention to Detail",
-      ],
-    },
-  ];
-
-  const hobbyGalleryItems = [
-    { image: "/about-me-images/travel/100_1534.JPG", text: "Takakkaw Falls" },
-    {
-      image:
-        "/about-me-images/travel/dji_mimo_20251227_102854_20251226192854_1766884669412_photo.jpg",
-      text: "Coron, Palawan",
-    },
-    {
-      image:
-        "/about-me-images/travel/dji_mimo_20251229_091350_20251229091350_1766985960594_photo.jpg",
-      text: "Boracay",
-    },
-    { image: "/about-me-images/travel/IMG_2366.JPG", text: "Edmonton Mall" },
-    { image: "/about-me-images/travel/IMG_2456.JPG", text: "Gion" },
-    { image: "/about-me-images/travel/IMG_2489.JPG", text: "Gion View" },
-    { image: "/about-me-images/travel/IMG_2841.JPG", text: "Manila" },
-    { image: "/about-me-images/travel/IMG_4256.JPG", text: "Green Lake" },
-    {
-      image: "/about-me-images/photography/IMG_2196.JPG",
-      text: "Japan",
-    },
-    {
-      image: "/about-me-images/photography/IMG_2220.JPG",
-      text: "Louis Vuitton",
-    },
-    {
-      image: "/about-me-images/photography/IMG_2224.JPG",
-      text: "Bvlgari",
-    },
-    {
-      image: "/about-me-images/photography/IMG_2310.JPG",
-      text: "Bamboo Forest",
-    },
-    {
-      image: "/about-me-images/photography/IMG_2327.JPG",
-      text: "Bamboo Forest",
-    },
-    {
-      image: "/about-me-images/photography/IMG_2334.JPG",
-      text: "Bamboo Forest",
-    },
-    {
-      image: "/about-me-images/photography/IMG_2341.JPG",
-      text: "Arabica",
-    },
-    {
-      image: "/about-me-images/photography/IMG_2483.JPG",
-      text: "Gion",
-    },
-    {
-      image: "/about-me-images/photography/IMG_2492.JPG",
-      text: "Gion",
-    },
-    {
-      image: "/about-me-images/photography/IMG_2499.JPG",
-      text: "Gion",
-    },
-    {
-      image: "/about-me-images/photography/IMG_2558.JPG",
-      text: "Glico Man",
-    },
-    {
-      image: "/about-me-images/photography/IMG_2588.JPG",
-      text: "Universal Studios",
-    },
-    {
-      image: "/about-me-images/photography/IMG_2767.JPG",
-      text: "Coron",
-    },
-    { image: "/about-me-images/cafe/100_1304.JPG", text: "Nana's Green Tea" },
-    { image: "/about-me-images/cafe/IMG_2351.JPG", text: "Arabica" },
-    { image: "/about-me-images/cafe/IMG_5312.JPG", text: "Isetta Cafe Bistro" },
-    { image: "/about-me-images/cafe/IMG_5347.JPG", text: "Cafe Algan" },
-    { image: "/about-me-images/cafe/IMG_6418.JPG", text: "Saunters" },
-  ].map((item) => ({
-    ...item,
-    hobbyCode: item.image.includes("/travel/")
-      ? "01"
-      : item.image.includes("/photography/")
-        ? "02"
-        : "03",
-  }));
-
   return (
     <div className={styles.page}>
       <NavBar />
       <main className={styles.main}>
         <section className={`${styles.section} ${styles.hero}`}>
           <div className={styles.sectionInner}>
+            <h1 className={styles.pageTitle}>ABOUT ME</h1>
             <div className={styles.heroGrid}>
+              <div className={styles.heroImage} aria-hidden="true" />
               <div className={styles.heroText}>
-                <span className={styles.eyebrow}>About Me</span>
-                <h1 className={styles.pageTitle}>
-                  I design and build interfaces that feel clear, warm, and easy
-                  to use.
-                </h1>
                 <h2 className={styles.heroName}>Denise Aquino</h2>
                 <p className={styles.heroRole}>Front-End Web Developer</p>
                 <p className={styles.heroBody}>
@@ -142,26 +26,6 @@ export default function About() {
                   responsive, well-structured code. I enjoy collaborative work
                   that blends problem solving, visual clarity, and performance.
                 </p>
-                <div className={styles.heroHighlights}>
-                  <div className={styles.highlightCard}>
-                    <span className={styles.highlightNumber}>UI</span>
-                    <span className={styles.highlightLabel}>
-                      thoughtful interfaces
-                    </span>
-                  </div>
-                  <div className={styles.highlightCard}>
-                    <span className={styles.highlightNumber}>Code</span>
-                    <span className={styles.highlightLabel}>
-                      responsive front-end work
-                    </span>
-                  </div>
-                  <div className={styles.highlightCard}>
-                    <span className={styles.highlightNumber}>People</span>
-                    <span className={styles.highlightLabel}>
-                      collaborative process
-                    </span>
-                  </div>
-                </div>
                 <div className={styles.heroLinks}>
                   <a
                     className={styles.heroLink}
@@ -194,23 +58,23 @@ export default function About() {
                       <path
                         d="M22.8777 11.4389C25.1531 11.4389 27.3352 12.3427 28.9441 13.9516C30.553 15.5605 31.4569 17.7427 31.4569 20.018V30.027H25.7374V20.018C25.7374 19.2596 25.4361 18.5322 24.8998 17.9959C24.3635 17.4596 23.6362 17.1583 22.8777 17.1583C22.1193 17.1583 21.3919 17.4596 20.8556 17.9959C20.3193 18.5322 20.018 19.2596 20.018 20.018V30.027H14.2986V20.018C14.2986 17.7427 15.2025 15.5605 16.8114 13.9516C18.4203 12.3427 20.6024 11.4389 22.8777 11.4389Z"
                         stroke="#1E1E1E"
-                        strokeWidth="3.0027"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                        stroke-width="3.0027"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
                       />
                       <path
                         d="M8.57917 12.8687H2.85974V30.027H8.57917V12.8687Z"
                         stroke="#1E1E1E"
-                        strokeWidth="3.0027"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                        stroke-width="3.0027"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
                       />
                       <path
                         d="M5.71945 8.57917C7.29883 8.57917 8.57917 7.29883 8.57917 5.71945C8.57917 4.14008 7.29883 2.85974 5.71945 2.85974C4.14008 2.85974 2.85974 4.14008 2.85974 5.71945C2.85974 7.29883 4.14008 8.57917 5.71945 8.57917Z"
                         stroke="#1E1E1E"
-                        strokeWidth="3.0027"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
+                        stroke-width="3.0027"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
                       />
                     </svg>
                     Linkedin
@@ -224,13 +88,13 @@ export default function About() {
                       xmlns="http://www.w3.org/2000/svg"
                       className={styles.linkIcon}
                     >
-                      <g clipPath="url(#clip0_94_327)">
+                      <g clip-path="url(#clip0_94_327)">
                         <path
                           d="M12.8687 27.1673C5.71945 29.312 5.71945 23.5926 2.85974 22.8777M22.8777 31.4568V25.9233C22.9314 25.2415 22.8392 24.5561 22.6075 23.9126C22.3758 23.2692 22.0097 22.6824 21.5337 22.1914C26.0234 21.6909 30.7419 19.9894 30.7419 12.1824C30.7416 10.186 29.9737 8.26628 28.5972 6.82041C29.249 5.07385 29.2029 3.14332 28.4685 1.42985C28.4685 1.42985 26.7812 0.929401 22.8777 3.54604C19.6005 2.65784 16.146 2.65784 12.8687 3.54604C8.96523 0.929401 7.278 1.42985 7.278 1.42985C6.54359 3.14332 6.4975 5.07385 7.14931 6.82041C5.76253 8.277 4.99383 10.2141 5.00453 12.2253C5.00453 19.9751 9.72305 21.6766 14.2128 22.2343C13.7424 22.7204 13.3796 23.3001 13.148 23.9357C12.9164 24.5713 12.8213 25.2485 12.8687 25.9233V31.4568"
                           stroke="#1E1E1E"
-                          strokeWidth="3.21718"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
+                          stroke-width="3.21718"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
                         />
                       </g>
                       <defs>
@@ -241,16 +105,6 @@ export default function About() {
                     </svg>
                     Github
                   </a>
-                </div>
-              </div>
-              <div className={styles.heroVisualColumn}>
-                <div className={styles.heroImage} aria-hidden="true" />
-                <div className={styles.noteCard}>
-                  <span className={styles.noteLabel}>Currently</span>
-                  <p className={styles.noteText}>
-                    Studying at BCIT, building portfolio projects, and refining
-                    the balance between design detail and clean development.
-                  </p>
                 </div>
               </div>
             </div>
@@ -275,27 +129,37 @@ export default function About() {
                 collaboration.
               </p>
             </header>
-            <div className={styles.skillsLayout}>
-              <aside className={styles.skillsLead}>
-                <span className={styles.skillsLeadLabel}>Toolkit</span>
-                <p className={styles.skillsLeadText}>
-                  I work at the intersection of visual design and front-end
-                  development, with a focus on clarity, usability, and clean
-                  implementation.
-                </p>
-              </aside>
-              <div className={styles.skillsColumns}>
-                {skillGroups.map((group) => (
-                  <article key={group.id} className={styles.skillColumnCard}>
-                    <h3 className={styles.skillColumnTitle}>{group.label}</h3>
-                    <ul className={styles.skillBulletList}>
-                      {group.items.map((item) => (
-                        <li key={`${group.id}-${item}`}>{item}</li>
-                      ))}
-                    </ul>
-                  </article>
-                ))}
-              </div>
+            <div className={styles.skillGrid}>
+              <article className={styles.skillCard}>
+                <h3 className={styles.skillTitle}>Programming</h3>
+                <div className={styles.skillList}>
+                  <span>HTML</span>
+                  <span>CSS</span>
+                  <span>JavaScript</span>
+                  <span>React</span>
+                  <span>Next.js</span>
+                </div>
+              </article>
+              <article className={styles.skillCard}>
+                <h3 className={styles.skillTitle}>Software + Tools</h3>
+                <div className={styles.skillList}>
+                  <span>Figma</span>
+                  <span>Adobe Illustrator</span>
+                  <span>VS Code</span>
+                  <span>Git + GitHub</span>
+                  <span>After Effects</span>
+                </div>
+              </article>
+              <article className={styles.skillCard}>
+                <h3 className={styles.skillTitle}>Strengths</h3>
+                <div className={styles.skillList}>
+                  <span>Accessible UI</span>
+                  <span>Design Systems</span>
+                  <span>Team Collaboration</span>
+                  <span>Problem Solving</span>
+                  <span>Attention to Detail</span>
+                </div>
+              </article>
             </div>
           </div>
         </section>
@@ -311,48 +175,25 @@ export default function About() {
                 Recent roles focused on front-end delivery and UX collaboration.
               </p>
             </header>
-            <div className={styles.experienceLayout}>
-              <aside className={styles.experienceLead}>
-                <span className={styles.experienceEyebrow}>Selected Roles</span>
-                <p className={styles.experienceLeadText}>
-                  I enjoy projects where visual clarity, implementation, and
-                  problem solving all meet in the same workflow.
-                </p>
-                <div className={styles.experienceStats}>
-                  <div className={styles.experienceStat}>
-                    <strong>2</strong>
-                    <span>recent product roles</span>
-                  </div>
-                  <div className={styles.experienceStat}>
-                    <strong>UI + UX</strong>
-                    <span>design-to-code focus</span>
-                  </div>
-                </div>
-              </aside>
-              <div className={styles.timeline}>
-                <ExperienceCard
-                  index="01"
-                  title="Front-End / Full-Stack Developer"
-                  project="Got It Web App — September 2025 to December 2025"
-                  focus={["Full-stack build", "PDF tools", "Responsive UI"]}
-                  bullets={[
-                    "Developed a full-stack web application that simplifies dense electrical manuals for students.",
-                    "Built a custom PDF viewer with tools for highlighting and content personalization.",
-                    "Collaborated with designers and engineers to translate UI/UX into responsive components.",
-                  ]}
-                />
-                <ExperienceCard
-                  index="02"
-                  title="UX/UI Designer + Front-End Developer"
-                  project="Premiere Web App — January 2025 to May 2025"
-                  focus={["Wireframing", "Front-end build", "Usability"]}
-                  bullets={[
-                    "Designed intuitive user flows with usability, accessibility, and clarity as core goals.",
-                    "Implemented responsive UI with HTML, CSS, and JavaScript.",
-                    "Created research-driven wireframes, mockups, and prototypes in Figma.",
-                  ]}
-                />
-              </div>
+            <div className={styles.timeline}>
+              <ExperienceCard
+                title="Front-End / Full-Stack Developer"
+                project="Got It Web App — September 2025 to December 2025"
+                bullets={[
+                  "Developed a full-stack web application that simplifies dense electrical manuals for students.",
+                  "Built a custom PDF viewer with tools for highlighting and content personalization.",
+                  "Collaborated with designers and engineers to translate UI/UX into responsive components.",
+                ]}
+              />
+              <ExperienceCard
+                title="UX/UI Designer + Front-End Developer"
+                project="Premiere Web App — January 2025 to May 2025"
+                bullets={[
+                  "Designed intuitive user flows with usability, accessibility, and clarity as core goals.",
+                  "Implemented responsive UI with HTML, CSS, and JavaScript.",
+                  "Created research-driven wireframes, mockups, and prototypes in Figma.",
+                ]}
+              />
             </div>
           </div>
         </section>
@@ -368,55 +209,25 @@ export default function About() {
                 Foundations in digital design, development, and creative tech.
               </p>
             </header>
-            <div className={styles.educationLayout}>
-              <aside className={styles.educationLead}>
-                <span className={styles.educationEyebrow}>Academic Focus</span>
-                <p className={styles.educationLeadText}>
-                  My education combines visual design thinking with front-end
-                  development, which helps me move comfortably between concept,
-                  interface design, and implementation.
+            <div className={styles.eduGrid}>
+              <article className={styles.eduCard}>
+                <h3 className={styles.eduTitle}>
+                  Digital Design and Development, Diploma
+                </h3>
+                <p className={styles.eduMeta}>
+                  British Columbia Institute of Technology — 2024 to 2026
                 </p>
-                <div className={styles.educationStats}>
-                  <div className={styles.educationStat}>
-                    <strong>2024-2026</strong>
-                    <span>current diploma timeline</span>
-                  </div>
-                  <div className={styles.educationStat}>
-                    <strong>Design + Code</strong>
-                    <span>blended creative training</span>
-                  </div>
-                </div>
-              </aside>
-              <div className={styles.eduGrid}>
-                <article className={styles.eduCard}>
-                  <div className={styles.eduTopRow}>
-                    <span className={styles.eduIndex}>01</span>
-                    <div>
-                      <h3 className={styles.eduTitle}>
-                        Digital Design and Development, Diploma
-                      </h3>
-                      <p className={styles.eduMeta}>
-                        British Columbia Institute of Technology — 2024 to 2026
-                      </p>
-                    </div>
-                  </div>
-                  <div className={styles.eduTags}>
-                    <span>UX/UI</span>
-                    <span>Front-End</span>
-                    <span>Prototyping</span>
-                  </div>
-                  <ul className={styles.eduList}>
-                    <li>
-                      Applied design principles to build accessible,
-                      user-centered web and mobile interfaces.
-                    </li>
-                    <li>
-                      Studied interaction design, prototyping, and front-end
-                      engineering fundamentals.
-                    </li>
-                  </ul>
-                </article>
-              </div>
+                <ul className={styles.eduList}>
+                  <li>
+                    Applied design principles to build accessible, user-centered
+                    web and mobile interfaces.
+                  </li>
+                  <li>
+                    Studied interaction design, prototyping, and front-end
+                    engineering fundamentals.
+                  </li>
+                </ul>
+              </article>
             </div>
           </div>
         </section>
@@ -431,33 +242,33 @@ export default function About() {
             </header>
             <div className={styles.hobbyIconRow}>
               <article className={styles.hobbyIconCard}>
-                <div className={styles.hobbyIcon} aria-hidden="true">
-                  <span>01</span>
-                </div>
-                Travelling
+                <div className={styles.hobbyIcon} aria-hidden="true" />
+                Reading
               </article>
               <article className={styles.hobbyIconCard}>
-                <div className={styles.hobbyIcon} aria-hidden="true">
-                  <span>02</span>
-                </div>
-                Photography
+                <div className={styles.hobbyIcon} aria-hidden="true" />
+                Gaming
               </article>
               <article className={styles.hobbyIconCard}>
-                <div className={styles.hobbyIcon} aria-hidden="true">
-                  <span>03</span>
-                </div>
-                Cafe Hopping
+                <div className={styles.hobbyIcon} aria-hidden="true" />
+                Working Out
               </article>
             </div>
-            <div className={styles.galleryWrap}>
-              <CircularGallery
-                bend={3}
-                textColor="#6b4a34"
-                font="700 34px 'Jost', sans-serif"
-                borderRadius={0.05}
-                scrollSpeed={2}
-                scrollEase={0.05}
-                items={hobbyGalleryItems}
+            <div className={styles.hobbyPanels}>
+              <HobbiesCard
+                title="TRAVELING"
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+                images={[]}
+              />
+              <HobbiesCard
+                title="PHOTOGRAPHY"
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+                images={[]}
+              />
+              <HobbiesCard
+                title="CAFE HOPPING"
+                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
+                images={[]}
               />
             </div>
           </div>
