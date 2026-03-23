@@ -74,23 +74,23 @@ export default function Home() {
                   <path
                     d="M22.8777 11.4389C25.1531 11.4389 27.3352 12.3427 28.9441 13.9516C30.553 15.5605 31.4569 17.7427 31.4569 20.018V30.027H25.7374V20.018C25.7374 19.2596 25.4361 18.5322 24.8998 17.9959C24.3635 17.4596 23.6362 17.1583 22.8777 17.1583C22.1193 17.1583 21.3919 17.4596 20.8556 17.9959C20.3193 18.5322 20.018 19.2596 20.018 20.018V30.027H14.2986V20.018C14.2986 17.7427 15.2025 15.5605 16.8114 13.9516C18.4203 12.3427 20.6024 11.4389 22.8777 11.4389Z"
                     stroke="#1E1E1E"
-                    stroke-width="3.0027"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="3.0027"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M8.57917 12.8687H2.85974V30.027H8.57917V12.8687Z"
                     stroke="#1E1E1E"
-                    stroke-width="3.0027"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="3.0027"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                   <path
                     d="M5.71945 8.57917C7.29883 8.57917 8.57917 7.29883 8.57917 5.71945C8.57917 4.14008 7.29883 2.85974 5.71945 2.85974C4.14008 2.85974 2.85974 4.14008 2.85974 5.71945C2.85974 7.29883 4.14008 8.57917 5.71945 8.57917Z"
                     stroke="#1E1E1E"
-                    stroke-width="3.0027"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
+                    strokeWidth="3.0027"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
                   />
                 </svg>
                 Linkedin
@@ -104,13 +104,13 @@ export default function Home() {
                   xmlns="http://www.w3.org/2000/svg"
                   className={styles.linkIcon}
                 >
-                  <g clip-path="url(#clip0_94_327)">
+                  <g clipPath="url(#clip0_94_327)">
                     <path
                       d="M12.8687 27.1673C5.71945 29.312 5.71945 23.5926 2.85974 22.8777M22.8777 31.4568V25.9233C22.9314 25.2415 22.8392 24.5561 22.6075 23.9126C22.3758 23.2692 22.0097 22.6824 21.5337 22.1914C26.0234 21.6909 30.7419 19.9894 30.7419 12.1824C30.7416 10.186 29.9737 8.26628 28.5972 6.82041C29.249 5.07385 29.2029 3.14332 28.4685 1.42985C28.4685 1.42985 26.7812 0.929401 22.8777 3.54604C19.6005 2.65784 16.146 2.65784 12.8687 3.54604C8.96523 0.929401 7.278 1.42985 7.278 1.42985C6.54359 3.14332 6.4975 5.07385 7.14931 6.82041C5.76253 8.277 4.99383 10.2141 5.00453 12.2253C5.00453 19.9751 9.72305 21.6766 14.2128 22.2343C13.7424 22.7204 13.3796 23.3001 13.148 23.9357C12.9164 24.5713 12.8213 25.2485 12.8687 25.9233V31.4568"
                       stroke="#1E1E1E"
-                      stroke-width="3.21718"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
+                      strokeWidth="3.21718"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
                     />
                   </g>
                   <defs>
@@ -135,12 +135,16 @@ export default function Home() {
               title="AI Powered Study Tool"
               body="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
               buttonText="Try It Now!"
+              href="/projects/got-it"
+              image="/project-mockup/gotit-brochure.jpg"
             />
             <FeatureCard
-              eyebrow="GOT IT"
-              title="AI Powered Study Tool"
+              eyebrow="LENDITOUT"
+              title="Community Lending Platform"
               body="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
-              buttonText="Try It Now!"
+              buttonText="View Case Study"
+              href="/projects/lenditout"
+              image="/case-study/lenditout/lenditout-phones.png"
               flipped={true}
             />
             <FeatureCard
@@ -148,6 +152,8 @@ export default function Home() {
               title="Japan Tour Magazine"
               body="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
               buttonText="View More Pages"
+              href="/projects"
+              image="/project-mockup/eAdvert-mockup.png"
             />
           </div>
           <div className={styles.featuredFooter}>

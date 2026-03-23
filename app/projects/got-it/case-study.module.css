@@ -9,181 +9,311 @@
   gap: 0;
 }
 
-.main p {
-  max-width: 65ch;
-}
-
 /* Header Section */
 .header {
-  background-color: #f9f9f9;
-  padding: 6rem 2rem 4rem;
+  background: linear-gradient(180deg, #1a1522 0%, #17121f 62%, #211b2a 100%);
+  padding: 10rem 2rem 8.5rem;
+  min-height: 100svh;
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0 0;
+  height: 7rem;
+  background: linear-gradient(
+    180deg,
+    rgba(23, 18, 31, 0) 0%,
+    rgba(45, 45, 45, 0.75) 100%
+  );
+  pointer-events: none;
+  z-index: 1;
 }
 
 .headerContent {
-  width: min(92vw, 75rem);
+  width: min(92vw, 60rem);
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 6rem;
   align-items: start;
+  margin: 0 auto;
+  transform: translateX(5rem);
+  position: relative;
+  z-index: 2;
 }
 
 .headerLeft {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  flex-direction: column;
+  gap: 2rem;
 }
 
-.mockupImages {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.badge {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  width: fit-content;
+  color: #f5f1ed;
 }
 
-.phoneMockup {
-  width: 30%;
-  height: auto;
-  position: absolute;
-  left: 10%;
-  top: 10%;
-  z-index: 2;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+.title {
+  font-size: 4.5rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.1;
+  font-family: serif;
+  color: #f5f1ed;
 }
 
-.desktopMockup {
-  width: 80%;
-  height: auto;
-  position: relative;
-  z-index: 1;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+.subtitle {
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin: 0;
+  line-height: 1.5;
+  color: #f5f1ed;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  margin: 0;
+  color: rgba(245, 241, 237, 0.86);
+  max-width: 55ch;
 }
 
 .headerRight {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 2.5rem;
+  padding-top: 0.5rem;
+  align-self: end;
 }
 
-.badge {
-  background-color: #e91e63;
-  color: white;
-  padding: 0.5rem 1.5rem;
-  font-size: 0.8rem;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  width: fit-content;
-  border-radius: 2px;
+.metaSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
 }
 
-.title {
-  font-size: 4rem;
-  font-weight: 700;
-  margin: 0;
-  letter-spacing: 0.05em;
+.metaLabel {
+  font-size: 0.65rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: rgba(245, 241, 237, 0.7);
 }
 
-.subtitle {
-  font-size: 1.5rem;
-  font-weight: 600;
-  margin: 0;
-  line-height: 1.3;
-}
-
-.descriptionBox {
-  background-color: white;
-  border: 2px solid #000;
-  padding: 1.5rem;
-  margin-top: 1rem;
-}
-
-.boxTitle {
+.metaValue {
   font-size: 1rem;
-  font-weight: 700;
-  margin: 0 0 1rem 0;
-}
-
-.description {
-  font-size: 0.9rem;
-  line-height: 1.6;
+  font-weight: 400;
   margin: 0;
-  color: #333;
+  color: #f5f1ed;
+  line-height: 1.5;
 }
 
-.viewButton {
-  background-color: #000;
-  color: white;
-  padding: 1rem 2.5rem;
+.viewLive {
+  color: #131019;
+  background-color: #f5f1ed;
   text-decoration: none;
-  font-weight: 600;
-  font-size: 0.9rem;
-  letter-spacing: 0.1em;
+  font-weight: 500;
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
   width: fit-content;
-  margin-top: 1rem;
-  border-radius: 2px;
-  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  padding: 0.6rem 0.85rem;
+  border-radius: 0;
+  transition: opacity 0.3s;
 }
 
-.viewButton:hover {
-  background-color: #333;
+.viewLive:hover {
+  opacity: 0.7;
+}
+
+.arrow {
+  font-size: 1rem;
+}
+
+/* Features Overview Section */
+.featuresSection {
+  background-color: #f9f9f9;
+  padding: 1rem 2rem 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.featuresImage {
+  width: min(92vw, 60rem);
+  height: auto;
+  display: block;
 }
 
 /* Table of Contents */
 .tocSection {
-  background-color: #2d2d2d;
+  background-color: #071a2e;
   padding: 3rem 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
   scroll-margin-top: 100px;
+  position: relative;
 }
 
 .tocTitle {
-  color: white;
-  font-size: 2rem;
-  font-weight: 600;
-  margin: 0 0 2rem 0;
+  color: #e8f4ff;
+  font-size: 1.15rem;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  margin: 0 0 1.6rem 0;
   text-align: center;
+  opacity: 0.8;
 }
 
 .tocGrid {
   width: min(92vw, 60rem);
   display: grid;
-  grid-template-columns: repeat(2, max-content);
-  gap: 2rem 8rem;
-  justify-content: center;
-  justify-items: start;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
 }
 
 .tocItem {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   gap: 1rem;
+  width: 100%;
+  min-height: 5.25rem;
+  padding: 1.1rem 1.25rem;
   text-decoration: none;
   cursor: pointer;
-  transition: opacity 0.2s ease;
+  border: 1px solid rgba(100, 200, 255, 0.15);
+  background: linear-gradient(
+    180deg,
+    rgba(100, 200, 255, 0.06) 0%,
+    rgba(100, 200, 255, 0.02) 100%
+  );
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  transition:
+    transform 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease,
+    box-shadow 0.25s ease;
 }
 
 .tocItem:hover {
-  opacity: 0.7;
+  transform: translateY(-3px);
+  border-color: rgba(100, 200, 255, 0.45);
+  background: linear-gradient(
+    180deg,
+    rgba(100, 200, 255, 0.14) 0%,
+    rgba(100, 200, 255, 0.04) 100%
+  );
+  box-shadow: 0 14px 30px rgba(0, 20, 50, 0.3);
 }
 
 .tocNumber {
-  color: white;
-  font-size: 1.5rem;
+  color: #e8f4ff;
+  font-size: 0.85rem;
   font-weight: 700;
+  letter-spacing: 0.16em;
   flex-shrink: 0;
+  width: 2.6rem;
+  height: 2.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(100, 200, 255, 0.3);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(100, 200, 255, 0.08);
 }
 
 .tocLabel {
-  color: white;
-  font-size: 1rem;
+  color: #e8f4ff;
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  line-height: 1.4;
+}
+
+/* Content Wrapper with Sticky TOC Sidebar */
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 0;
+}
+
+.tocSidebar {
+  grid-column: 1;
+  grid-row: 1 / -1;
+  background-color: #f9f9f9;
+  padding: 3rem 2rem 2rem;
+  position: sticky;
+  left: 0;
+  top: 7.5rem;
+  width: 280px;
+  height: calc(100vh - 7.5rem);
+  overflow-y: auto;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+  z-index: 20;
+}
+
+.tocNav {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tocNavTitle {
+  color: #131019;
+  font-size: 0.9rem;
   font-weight: 500;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin: 0 0 1.5rem 0;
+  opacity: 0.8;
+}
+
+.tocNavItem {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  padding: 0.5rem 0.75rem;
+  border-radius: 4px;
+}
+
+.tocNavItem:hover {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.tocNavNumber {
+  color: rgba(0, 0, 0, 0.45);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  flex-shrink: 0;
+}
+
+.tocNavLabel {
+  color: #131019;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
+}
+
+.contentWrapper > .contentSection {
+  grid-column: 2;
 }
 
 /* Content Sections */
@@ -257,7 +387,6 @@
 .sectionImage {
   width: 100%;
   height: auto;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Section 02: User Research */
@@ -383,7 +512,11 @@
 
 .comparisonImage {
   width: 100%;
+  aspect-ratio: 16 / 9;
   height: auto;
+  object-fit: cover;
+  object-position: center;
+  display: block;
   border: 1px solid #ddd;
   background-color: #fff;
 }
@@ -553,6 +686,30 @@
   .headerContent {
     grid-template-columns: 1fr;
     gap: 2rem;
+    transform: none;
+  }
+
+  .contentWrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .contentWrapper > .contentSection {
+    grid-column: 1;
+  }
+
+  .tocSidebar {
+    position: static;
+    width: 100%;
+    height: auto;
+    border-right: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+    padding: 1.5rem 1rem;
+  }
+
+  .tocNav {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 0.5rem;
   }
 
   .tocGrid {
