@@ -50,11 +50,6 @@ export default function Projects() {
       image: "/project-mockup/lotus-mockup.png",
     },
     {
-      title: "Travel eAdvert",
-      category: "graphic",
-      image: "/project-mockup/eAdvert-mockup.png",
-    },
-    {
       title: "Rock Paper Scissors Game",
       category: "web",
       image: "/project-mockup/landing-page.png",
@@ -66,22 +61,6 @@ export default function Projects() {
       wide: true,
       image: "/project-mockup/spotify.png",
       slug: "other-projects/spotify",
-    },
-
-    {
-      title: "Brunch Menu Design",
-      category: "graphic",
-      image: "/project-mockup/menu-mockup.png",
-    },
-    {
-      title: "B&W Painting",
-      category: "Photoshop Painting",
-      image: "/project-mockup/painting.png",
-    },
-    {
-      title: "Camera Illustration",
-      category: "Illustrator",
-      image: "/project-mockup/camera-bg.png",
     },
     {
       title: "LendItOut",

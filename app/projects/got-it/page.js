@@ -410,24 +410,22 @@ export default function GotItCaseStudy() {
                 <div className={styles.finalText}>
                   <h3 className={styles.resultsTitle}>Results</h3>
                   <p>
-                    The final solution enables autonomous to upload homework
-                    assignments any device efficiently, which mean leaving much
-                    of their classes. The end product was delivered in 3 weeks,
-                    which mean learning you'll learning leaving today. I have
-                    received positive feedback from fellow students who have
-                    learned with it so far.
+                    The final website enables apprentices to upload manuals and
+                    their own materials or access built in textbooks, which
+                    creates learning much easier, by transforming dense
+                    technical manuals into simplified summaries and mind-maps
+                    creating a visual breakdown of topics. By combining these UX
+                    structures with AI powered tools, we make studying more
+                    manageable and less overwhelming.
                   </p>
                   <p>
-                    Through this project, I gained hands-on experience with
-                    full-stack development, API integration, and user experience
-                    design. The project reinforced the importance of user
-                    testing and iteration.
-                  </p>
-                  <p>
-                    During the design, I learned we simplify how students
-                    multitask while studying while our GPT powered learning
-                    assistant that makes learning more efficient and enjoyable
-                    for students.
+                    <strong>Reflection:</strong> During this project, it made me
+                    realize how designing solutions that create meaningful and
+                    real world impact feels rewarding and helped me understand
+                    and moving forward help me design in a more empathetic and
+                    intentional way. It was a challenge to design and code our
+                    features while keeping it as simple as possible. Despite
+                    many restraints, our team created a satisfying product.
                   </p>
                 </div>
                 <div className={styles.finalImage}>

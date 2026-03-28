@@ -73,7 +73,7 @@ export default function RpsCaseStudy() {
                 <p className={styles.metaValue}>JavaScript, HTML, CSS, Figma</p>
               </div>
               <a
-                href="https://deniseaquino011.github.io/Rock-Paper-Scissors/"
+                href="https://github.com/Zkim1234/comp2170-rock_paper_scissors"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.viewLive}
@@ -301,7 +301,7 @@ export default function RpsCaseStudy() {
                   className={`${styles.sectionImage} ${styles.gameImage}`}
                 />
                 <a
-                  href="https://deniseaquino011.github.io/Rock-Paper-Scissors/"
+                  href="https://github.com/Zkim1234/comp2170-rock_paper_scissors"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.tryButton}

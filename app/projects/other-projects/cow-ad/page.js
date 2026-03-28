@@ -100,16 +100,20 @@ export default function CowAdPage() {
               </div>
             </article>
 
-            <article className={styles.projectCard}>
-              <img
-                src="/project-mockup/menu-mockup.png"
-                alt="Brunch menu design"
-                className={styles.projectImage}
-              />
-              <div className={styles.projectOverlay}>
-                <span className={styles.projectOverlayText}>VIEW PROJECT</span>
-              </div>
-            </article>
+            <Link href="/projects/rps" className={styles.projectLink}>
+              <article className={styles.projectCard}>
+                <img
+                  src="/case-study/rps/main-game.png"
+                  alt="Rock Paper Scissors case study"
+                  className={styles.projectImage}
+                />
+                <div className={styles.projectOverlay}>
+                  <span className={styles.projectOverlayText}>
+                    VIEW PROJECT
+                  </span>
+                </div>
+              </article>
+            </Link>
           </div>
         </section>
       </main>

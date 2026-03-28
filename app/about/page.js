@@ -2,11 +2,73 @@
 
 import NavBar from "../../ui/nav-bar/page";
 import Footer from "../../ui/footer/page";
-import HobbiesCard from "../../ui/hobbies-card/page";
+import CircularGallery from "../../ui/circular-gallery/CircularGallery";
 import ExperienceCard from "../../ui/experience-card/page";
 import styles from "./about.module.css";
 
 export default function About() {
+  const hobbyGalleryItems = [
+    { image: "/about-me-images/travel/100_1534.JPG", text: "Takakkaw Falls" },
+    {
+      image:
+        "/about-me-images/travel/dji_mimo_20251227_102854_20251226192854_1766884669412_photo.jpg",
+      text: "Coron, Palawan",
+    },
+    {
+      image:
+        "/about-me-images/travel/dji_mimo_20251229_091350_20251229091350_1766985960594_photo.jpg",
+      text: "Boracay",
+    },
+    { image: "/about-me-images/travel/IMG_2366.JPG", text: "Edmonton Mall" },
+    { image: "/about-me-images/travel/IMG_2456.JPG", text: "Gion" },
+    { image: "/about-me-images/travel/IMG_2489.JPG", text: "Gion View" },
+    { image: "/about-me-images/travel/IMG_2841.JPG", text: "Manila" },
+    { image: "/about-me-images/travel/IMG_4256.JPG", text: "Green Lake" },
+    { image: "/about-me-images/photography/IMG_2196.JPG", text: "Japan" },
+    {
+      image: "/about-me-images/photography/IMG_2220.JPG",
+      text: "Louis Vuitton",
+    },
+    { image: "/about-me-images/photography/IMG_2224.JPG", text: "Bvlgari" },
+    {
+      image: "/about-me-images/photography/IMG_2310.JPG",
+      text: "Bamboo Forest",
+    },
+    {
+      image: "/about-me-images/photography/IMG_2327.JPG",
+      text: "Bamboo Forest",
+    },
+    {
+      image: "/about-me-images/photography/IMG_2334.JPG",
+      text: "Bamboo Forest",
+    },
+    { image: "/about-me-images/photography/IMG_2341.JPG", text: "Arabica" },
+    { image: "/about-me-images/photography/IMG_2483.JPG", text: "Gion" },
+    { image: "/about-me-images/photography/IMG_2492.JPG", text: "Gion" },
+    { image: "/about-me-images/photography/IMG_2499.JPG", text: "Gion" },
+    {
+      image: "/about-me-images/photography/IMG_2558.JPG",
+      text: "Glico Man",
+    },
+    {
+      image: "/about-me-images/photography/IMG_2588.JPG",
+      text: "Universal Studios",
+    },
+    { image: "/about-me-images/photography/IMG_2767.JPG", text: "Coron" },
+    { image: "/about-me-images/cafe/100_1304.JPG", text: "Nana's Green Tea" },
+    { image: "/about-me-images/cafe/IMG_2351.JPG", text: "Arabica" },
+    { image: "/about-me-images/cafe/IMG_5312.JPG", text: "Isetta Cafe Bistro" },
+    { image: "/about-me-images/cafe/IMG_5347.JPG", text: "Cafe Algan" },
+    { image: "/about-me-images/cafe/IMG_6418.JPG", text: "Saunters" },
+  ].map((item) => ({
+    ...item,
+    hobbyCode: item.image.includes("/travel/")
+      ? "01"
+      : item.image.includes("/photography/")
+        ? "02"
+        : "03",
+  }));
+
   return (
     <div className={styles.page}>
       <NavBar />
@@ -242,33 +304,33 @@ export default function About() {
             </header>
             <div className={styles.hobbyIconRow}>
               <article className={styles.hobbyIconCard}>
-                <div className={styles.hobbyIcon} aria-hidden="true" />
-                Reading
+                <div className={styles.hobbyIcon} aria-hidden="true">
+                  <span>01</span>
+                </div>
+                Travelling
               </article>
               <article className={styles.hobbyIconCard}>
-                <div className={styles.hobbyIcon} aria-hidden="true" />
-                Gaming
+                <div className={styles.hobbyIcon} aria-hidden="true">
+                  <span>02</span>
+                </div>
+                Photography
               </article>
               <article className={styles.hobbyIconCard}>
-                <div className={styles.hobbyIcon} aria-hidden="true" />
-                Working Out
+                <div className={styles.hobbyIcon} aria-hidden="true">
+                  <span>03</span>
+                </div>
+                Cafe Hopping
               </article>
             </div>
-            <div className={styles.hobbyPanels}>
-              <HobbiesCard
-                title="TRAVELING"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-                images={[]}
-              />
-              <HobbiesCard
-                title="PHOTOGRAPHY"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-                images={[]}
-              />
-              <HobbiesCard
-                title="CAFE HOPPING"
-                text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam."
-                images={[]}
+            <div className={styles.galleryWrap}>
+              <CircularGallery
+                bend={3}
+                textColor="#6b4a34"
+                font="700 34px 'Jost', sans-serif"
+                borderRadius={0.05}
+                scrollSpeed={2}
+                scrollEase={0.05}
+                items={hobbyGalleryItems}
               />
             </div>
           </div>
