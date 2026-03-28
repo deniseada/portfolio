@@ -53,9 +53,9 @@
 
 .heroGrid {
   display: grid;
-  grid-template-columns: minmax(0, 1.2fr) minmax(17rem, 0.8fr);
+  grid-template-columns: minmax(13rem, 0.72fr) minmax(0, 1.28fr);
   gap: 1.25rem;
-  align-items: start;
+  align-items: stretch;
 }
 
 .heroText {
@@ -163,49 +163,25 @@
 }
 
 .heroImage {
-  min-height: 34rem;
-  background:
-    radial-gradient(
-      circle at 20% 20%,
-      rgba(255, 255, 255, 0.9),
-      transparent 22%
-    ),
-    radial-gradient(
-      circle at 76% 28%,
-      rgba(210, 192, 164, 0.85),
-      transparent 24%
-    ),
-    radial-gradient(
-      circle at 58% 72%,
-      rgba(71, 92, 118, 0.28),
-      transparent 28%
-    ),
-    linear-gradient(160deg, #d9c8b3 0%, #c8b39c 35%, #7b8b9f 100%);
-  border-radius: 1rem;
-  box-shadow: 0 16px 30px rgba(34, 48, 72, 0.16);
+  width: 100%;
+  max-width: 21rem;
+  min-height: 0;
+  height: 100%;
+  aspect-ratio: 3 / 4;
   position: relative;
   overflow: hidden;
+  justify-self: start;
+  border-radius: 1rem;
+  box-shadow: 0 16px 30px rgba(34, 48, 72, 0.16);
 }
 
-.heroImage::before {
-  content: "";
+.heroImageMedia {
   position: absolute;
-  inset: 12% 12% auto auto;
-  width: 38%;
-  aspect-ratio: 4 / 5;
-  border: 1px solid rgba(255, 255, 255, 0.42);
-  background: rgba(255, 255, 255, 0.18);
-  backdrop-filter: blur(8px);
-}
-
-.heroImage::after {
-  content: "";
-  position: absolute;
-  inset: auto auto 10% 10%;
-  width: 46%;
-  aspect-ratio: 1 / 1;
-  border-radius: 999px;
-  background: rgba(47, 42, 33, 0.14);
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
 }
 
 .noteCard {
@@ -754,6 +730,11 @@
     grid-template-columns: 1fr;
   }
 
+  .heroImage {
+    width: min(100%, 19rem);
+    justify-self: center;
+  }
+
   .experienceLayout {
     grid-template-columns: 1fr;
   }
@@ -769,10 +750,6 @@
   .heroVisualColumn {
     grid-template-columns: minmax(0, 1fr) minmax(0, 0.95fr);
     align-items: start;
-  }
-
-  .heroImage {
-    min-height: 27rem;
   }
 
   .skillsLayout {

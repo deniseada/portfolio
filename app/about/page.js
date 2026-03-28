@@ -77,7 +77,13 @@ export default function About() {
           <div className={styles.sectionInner}>
             <h1 className={styles.pageTitle}>ABOUT ME</h1>
             <div className={styles.heroGrid}>
-              <div className={styles.heroImage} aria-hidden="true" />
+              <div className={styles.heroImage}>
+                <img
+                  src="/about-me-images/me.jpg"
+                  alt="Portrait of Denise Aquino"
+                  className={styles.heroImageMedia}
+                />
+              </div>
               <div className={styles.heroText}>
                 <h2 className={styles.heroName}>Denise Aquino</h2>
                 <p className={styles.heroRole}>Front-End Web Developer</p>
