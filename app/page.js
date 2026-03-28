@@ -32,7 +32,7 @@ export default function Home() {
           <div className={styles.heroContent}>
             <h1 className={styles.heroHeadline}>{displayedText}</h1>
             <p className={styles.heroRole}>
-              Digital Designer & Front-End Developer
+              DIGITAL DESIGNER & FRONT-END DEVELOPER
             </p>
             <p className={styles.heroCopy}>
               Digital Designer in the Digital Design and Development program at
@@ -133,7 +133,7 @@ export default function Home() {
             <FeatureCard
               eyebrow="GOT IT"
               title="AI Powered Study Tool"
-              body="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
+              body="A web platform designed for electrical apprentices to upload manuals and class materials, then turn dense technical content into simplified summaries and visual mind maps for easier studying."
               buttonText="Try It Now!"
               href="/projects/got-it"
               image="/project-mockup/gotit-brochure.jpg"
@@ -141,19 +141,19 @@ export default function Home() {
             <FeatureCard
               eyebrow="LENDITOUT"
               title="Community Lending Platform"
-              body="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
+              body="A neighborhood-focused lending app concept that helps users share and borrow items locally, with clear category browsing, request flows, and trust-building interaction patterns."
               buttonText="View Case Study"
               href="/projects/lenditout"
               image="/case-study/lenditout/lenditout-phones.png"
               flipped={true}
             />
             <FeatureCard
-              eyebrow="E-ADVERT"
-              title="Japan Tour Magazine"
-              body="Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut"
-              buttonText="View More Pages"
-              href="/projects"
-              image="/project-mockup/eAdvert-mockup.png"
+              eyebrow="RPS"
+              title="Rock Paper Scissors Game"
+              body="An interactive underwater Rock, Paper, Scissors game built to demonstrate core JavaScript concepts such as conditional logic, random outcomes, score tracking, and dynamic UI feedback."
+              buttonText="View Case Study"
+              href="/projects/rps"
+              image="/case-study/rps/main-game.png"
             />
           </div>
           <div className={styles.featuredFooter}>
