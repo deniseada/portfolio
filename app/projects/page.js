@@ -68,6 +68,13 @@ export default function Projects() {
       image: "/case-study/lenditout/lenditout-phones.png",
       slug: "lenditout",
     },
+    {
+      title: "Spinalis Internship",
+      category: ["ux", "web", "graphic"],
+      wide: true,
+      image: "/project-mockup/eAdvert-mockup.png",
+      slug: "spinalis",
+    },
   ];
 
   const visibleProjects =
