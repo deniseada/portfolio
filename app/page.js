@@ -35,12 +35,11 @@ export default function Home() {
               DIGITAL DESIGNER & FRONT-END DEVELOPER
             </p>
             <p className={styles.heroCopy}>
-              Digital Design and Development graduate passionate about creating
-              visually engaging and user-focused experiences. I enjoy turning
-              ideas into clean, thoughtful designs and using my front-end
-              development skills to bring them to life. Continuously learning
-              and refining my craft, I’m always excited to take on new
-              challenges and create meaningful digital experiences.
+              I'm passionate about creating engaging digital experiences through
+              design, content creation, and front-end development. I enjoy
+              transforming ideas into thoughtful, user-focused solutions that
+              support both audience needs and brand goals. Always looking to
+              learn, grow creatively, and take on new challenges. Let's connect!
             </p>
             <div className={styles.heroLinks}>
               <a
