@@ -86,13 +86,16 @@ export default function About() {
               </div>
               <div className={styles.heroText}>
                 <h2 className={styles.heroName}>Denise Aquino</h2>
-                <p className={styles.heroRole}>Front-End Web Developer</p>
+                <p className={styles.heroRole}>
+                  Digital Designer | Front-End Web Developer
+                </p>
                 <p className={styles.heroBody}>
-                  Front-end web developer currently in the Digital Design and
-                  Development program at BCIT. I focus on building clean,
-                  accessible interfaces and translating design intent into
-                  responsive, well-structured code. I enjoy collaborative work
-                  that blends problem solving, visual clarity, and performance.
+                  Digital Design and Development graduate with experience in
+                  content creation, marketing design, and front-end development.
+                  I enjoy creating engaging digital experiences that balance
+                  user needs, brand goals, and accessibility. Passionate about
+                  combining creativity and technology to develop thoughtful,
+                  user-focused solutions.
                 </p>
                 <div className={styles.heroLinks}>
                   <a

@@ -35,12 +35,12 @@ export default function Home() {
               DIGITAL DESIGNER & FRONT-END DEVELOPER
             </p>
             <p className={styles.heroCopy}>
-              Digital Designer in the Digital Design and Development program at
-              BCIT, with a passion for creating visually engaging and
-              user-focused experiences. I enjoy turning ideas into clean,
-              thoughtful designs while using my front-end skills to bring them
-              to life. I’m always looking to grow creatively, refine my skills,
-              and take on new challenges. Let’s connect!
+              Digital Design and Development graduate passionate about creating
+              visually engaging and user-focused experiences. I enjoy turning
+              ideas into clean, thoughtful designs and using my front-end
+              development skills to bring them to life. Continuously learning
+              and refining my craft, I’m always excited to take on new
+              challenges and create meaningful digital experiences.
             </p>
             <div className={styles.heroLinks}>
               <a
