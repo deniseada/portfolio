@@ -534,16 +534,6 @@ export default function SpinalisCaseStudy() {
                       communication, and a clearer focus on outcomes.
                     </p>
                   </div>
-
-                  <aside className={styles.reflectionAside} aria-hidden>
-                    <img
-                      src="/spinalis-social/Spinalis_Social_Facebook_Artist_02.png"
-                      alt="Selected work snapshot"
-                    />
-                    <p className={styles.reflectionAsideCaption}>
-                      Selected work snapshot
-                    </p>
-                  </aside>
                 </div>
               </div>
             </section>
