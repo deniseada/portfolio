@@ -23,77 +23,73 @@ const tocItems = [
 // Placeholder imagery for the internship case study. Replace these with final Spinalis deliverables.
 const advertorialGallery = [
   {
-    src: "/project-mockup/eAdvert-mockup.png",
-    alt: "Advertorial landing page mockup placeholder",
+    src: "/spinalis-social/Spinalis_Social_Facebook_Dentist_01.png",
+    alt: "Advertorial landing page 1",
   },
   {
-    src: "/project-mockup/menu-mockup.png",
-    alt: "Secondary advertorial mockup placeholder",
+    src: "/spinalis-social/Spinalis_Social_Facebook_Dentist_02.png",
+    alt: "Advertorial landing page 2",
   },
   {
-    src: "/project-mockup/painting.png",
-    alt: "Campaign layout placeholder",
+    src: "/spinalis-social/Spinalis_Social_Facebook_Dentist_03.png",
+    alt: "Advertorial landing page 3",
   },
 ];
 
 const emailGallery = [
   {
-    src: "/project-mockup/camera-bg.png",
-    alt: "Welcome email template placeholder",
+    src: "/spinalis-email/general-content.png",
+    alt: "Email content - general",
   },
   {
-    src: "/project-mockup/lotus-mockup.png",
-    alt: "Subscription email template placeholder",
+    src: "/spinalis-email/musician-content.png",
+    alt: "Email content - musician",
   },
   {
-    src: "/project-mockup/spotify.png",
-    alt: "Email sequence template placeholder",
-  },
-  {
-    src: "/case-study/lenditout/profile-new.png",
-    alt: "Additional email mockup placeholder",
+    src: "/spinalis-email/children-content.png",
+    alt: "Email content - children",
   },
 ];
 
 const socialGallery = [
   {
-    src: "/project-mockup/cow-billboard.png",
-    alt: "Facebook post mockup placeholder",
+    src: "/spinalis-social/Spinalis_Social_Facebook_Artist_01.png",
+    alt: "Social artist post",
   },
   {
-    src: "/project-mockup/gotit-brochure.jpg",
-    alt: "Instagram story mockup placeholder",
+    src: "/spinalis-social/Spinalis_Social_Facebook_Musician_01.png",
+    alt: "Social musician post 1",
   },
   {
-    src: "/case-study/got-it/dashboard-new.png",
-    alt: "Organic campaign graphic placeholder",
+    src: "/spinalis-social/Spinalis_Social_Facebook_Musician_02.png",
+    alt: "Social musician post 2",
   },
 ];
 
 const workGallery = [
   {
-    src: "/case-study/lenditout/lenditout-phones.png",
-    alt: "Internship work sample placeholder",
+    src: "/spinalis-social/Spinalis_Social_Facebook_Coroprate_01.png",
+    alt: "Work sample 1",
   },
   {
-    src: "/case-study/got-it/gotit-laptop.png",
-    alt: "Internship work sample placeholder",
+    src: "/spinalis-social/Spinalis_Social_Facebook_Coroprate_02.png",
+    alt: "Work sample 2",
   },
   {
-    src: "/project-mockup/eAdvert-mockup.png",
-    alt: "Internship work sample placeholder",
+    src: "/spinalis-social/Spinalis_Social_Facebook_HomeOffice_01.png",
+    alt: "Work sample 3",
   },
   {
-    src: "/project-mockup/menu-mockup.png",
-    alt: "Internship work sample placeholder",
+    src: "/spinalis-social/Spinalis_Social_Facebook_Musician_03.png",
+    alt: "Work sample 4",
   },
   {
-    src: "/project-mockup/painting.png",
-    alt: "Internship work sample placeholder",
+    src: "/spinalis-social/Spinalis_Social_Facebook_Beauty_01.png",
+    alt: "Work sample 5",
   },
   {
-    src: "/project-mockup/lotus-mockup.png",
-    alt: "Internship work sample placeholder",
+    src: "/spinalis-social/Spinalis_Social_Facebook_Children_01.png",
+    alt: "Work sample 6",
   },
 ];
 
@@ -155,6 +151,37 @@ const advertorialResponsibilities = [
   "Redesigned advertorial landing pages to improve layout structure and visual hierarchy.",
   "Implemented front-end updates that made the page clearer and more responsive.",
   "Refined spacing, section flow, and calls to action to support conversion goals.",
+];
+
+const advertorialLinks = [
+  {
+    label: "Dentists & Healthcare Professionals",
+    href: "https://www.activesitting.ca/pages/dentist-advertorial",
+  },
+  {
+    label: "Beauty & Tattoo Artists",
+    href: "https://www.activesitting.ca/pages/beauty-tattoo-page",
+  },
+  {
+    label: "Corporate Professionals",
+    href: "https://www.activesitting.ca/pages/corporate-page",
+  },
+  {
+    label: "Home Office Workers",
+    href: "https://www.activesitting.ca/pages/home-office-page",
+  },
+  {
+    label: "Artists & Creators",
+    href: "https://www.activesitting.ca/pages/artist-advertorial",
+  },
+  {
+    label: "Musicians & Performers",
+    href: "https://www.activesitting.ca/pages/musician-page",
+  },
+  {
+    label: "Students & Families",
+    href: "https://www.activesitting.ca/pages/childrens-page",
+  },
 ];
 
 const socialResponsibilities = [
@@ -303,16 +330,29 @@ export default function SpinalisCaseStudy() {
                   </div>
                 </div>
 
-                <MediaFrame
-                  src="/project-mockup/eAdvert-mockup.png"
-                  alt="Advertorial landing page mockup placeholder"
-                />
-              </div>
-
-              <div className={styles.galleryRow}>
-                {advertorialGallery.map((image) => (
-                  <MediaFrame key={image.alt} src={image.src} alt={image.alt} />
-                ))}
+                <div className={styles.advertorialLinksWrap}>
+                  <h3 className={styles.advertorialLinksTitle}>
+                    Check out the pages
+                  </h3>
+                  <div className={styles.advertorialLinks}>
+                    {advertorialLinks.map((link) => (
+                      <a
+                        key={link.href}
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={styles.advertorialLink}
+                      >
+                        <span className={styles.advertorialLabel}>
+                          {link.label}
+                        </span>
+                        <span className={styles.advertorialArrow} aria-hidden>
+                          →
+                        </span>
+                      </a>
+                    ))}
+                  </div>
+                </div>
               </div>
             </section>
 
@@ -340,7 +380,7 @@ export default function SpinalisCaseStudy() {
                 </div>
 
                 <MediaFrame
-                  src="/project-mockup/camera-bg.png"
+                  src="/spinalis-email/general-content.png"
                   alt="Email template placeholder"
                 />
               </div>
@@ -370,7 +410,7 @@ export default function SpinalisCaseStudy() {
                 </div>
 
                 <MediaFrame
-                  src="/project-mockup/cow-billboard.png"
+                  src="/spinalis-social/Spinalis_Social_Facebook_Artist_01.png"
                   alt="Social media mockup placeholder"
                 />
               </div>
@@ -434,34 +474,33 @@ export default function SpinalisCaseStudy() {
                 <div className={styles.reflectionInner}>
                   <div className={styles.reflectionText}>
                     <p>
-                      My internship at Spinalis strengthened the way I
-                      approach both design and development. I learned how to
-                      work more deliberately with spacing, hierarchy, and
-                      brand consistency so that each piece could support a
-                      clear goal without feeling crowded or disconnected.
+                      My internship at Spinalis strengthened the way I approach
+                      both design and development. I learned how to work more
+                      deliberately with spacing, hierarchy, and brand
+                      consistency so that each piece could support a clear goal
+                      without feeling crowded or disconnected.
                     </p>
 
                     <p>
                       On the technical side, I became more confident making
                       front-end adjustments that respected an existing system
-                      while still improving the experience. On the design
-                      side, I gained a better understanding of how marketing
-                      assets need to adapt across formats while staying
-                      recognizable and accessible.
+                      while still improving the experience. On the design side,
+                      I gained a better understanding of how marketing assets
+                      need to adapt across formats while staying recognizable
+                      and accessible.
                     </p>
 
                     <p>
-                      Overall, the experience helped me grow as a more
-                      versatile designer and developer. It showed me how to
-                      move between creative and technical work with more
-                      structure, stronger communication, and a clearer focus
-                      on outcomes.
+                      Overall, the experience helped me grow as a more versatile
+                      designer and developer. It showed me how to move between
+                      creative and technical work with more structure, stronger
+                      communication, and a clearer focus on outcomes.
                     </p>
                   </div>
 
                   <aside className={styles.reflectionAside} aria-hidden>
                     <img
-                      src="/project-mockup/painting.png"
+                      src="/spinalis-social/Spinalis_Social_Facebook_Artist_02.png"
                       alt="Selected work snapshot"
                     />
                     <p className={styles.reflectionAsideCaption}>
