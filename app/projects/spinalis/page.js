@@ -1,6 +1,15 @@
 "use client";
 
 import { Fragment, useEffect } from "react";
+import {
+  Stethoscope,
+  Scissors,
+  Briefcase,
+  Home,
+  Palette,
+  Music,
+  Users,
+} from "lucide-react";
 import NavBar from "../../../ui/nav-bar/page";
 import Footer from "../../../ui/footer/page";
 import styles from "./spinalis.module.css";
@@ -95,37 +104,31 @@ const workGallery = [
 
 const skillCards = [
   {
-    icon: "MD",
     title: "Marketing Design",
     description:
       "Created brand-aligned visuals that supported awareness, engagement, and campaign clarity.",
   },
   {
-    icon: "FE",
     title: "Front-End Development",
     description:
       "Implemented layout updates with responsive structure, semantic markup, and clean UI behavior.",
   },
   {
-    icon: "EM",
     title: "Email Marketing",
     description:
       "Designed templates for welcome and subscription flows that balanced readability and conversion.",
   },
   {
-    icon: "CD",
     title: "Conversion-Focused Design",
     description:
       "Improved hierarchy and calls to action so pages communicated value faster and more clearly.",
   },
   {
-    icon: "BC",
     title: "Brand Consistency",
     description:
       "Kept typography, spacing, and visual tone aligned across email, social, and landing page assets.",
   },
   {
-    icon: "CC",
     title: "Collaboration & Communication",
     description:
       "Worked across creative and technical tasks while translating feedback into focused iterations.",
@@ -157,30 +160,37 @@ const advertorialLinks = [
   {
     label: "Dentists & Healthcare Professionals",
     href: "https://www.activesitting.ca/pages/dentist-advertorial",
+    Icon: Stethoscope,
   },
   {
     label: "Beauty & Tattoo Artists",
     href: "https://www.activesitting.ca/pages/beauty-tattoo-page",
+    Icon: Scissors,
   },
   {
     label: "Corporate Professionals",
     href: "https://www.activesitting.ca/pages/corporate-page",
+    Icon: Briefcase,
   },
   {
     label: "Home Office Workers",
     href: "https://www.activesitting.ca/pages/home-office-page",
+    Icon: Home,
   },
   {
     label: "Artists & Creators",
     href: "https://www.activesitting.ca/pages/artist-advertorial",
+    Icon: Palette,
   },
   {
     label: "Musicians & Performers",
     href: "https://www.activesitting.ca/pages/musician-page",
+    Icon: Music,
   },
   {
     label: "Students & Families",
     href: "https://www.activesitting.ca/pages/childrens-page",
+    Icon: Users,
   },
 ];
 
@@ -314,6 +324,21 @@ export default function SpinalisCaseStudy() {
               />
               <div className={styles.sectionSplit}>
                 <div className={styles.sectionCopy}>
+                  <div className={styles.advertorialPreview}>
+                    <a
+                      href="https://www.activesitting.ca/pages/corporate-page"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={styles.previewImageLink}
+                    >
+                      <img
+                        src="/spinalis-email/corporate-page.png"
+                        alt="Corporate page preview"
+                        className={styles.previewImage}
+                        loading="lazy"
+                      />
+                    </a>
+                  </div>
                   <p className={styles.sectionLead}>
                     I redesigned and updated advertorial landing pages by
                     improving the layout, clarifying the hierarchy, and making
@@ -335,22 +360,31 @@ export default function SpinalisCaseStudy() {
                     Check out the pages
                   </h3>
                   <div className={styles.advertorialLinks}>
-                    {advertorialLinks.map((link) => (
-                      <a
-                        key={link.href}
-                        href={link.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={styles.advertorialLink}
-                      >
-                        <span className={styles.advertorialLabel}>
-                          {link.label}
-                        </span>
-                        <span className={styles.advertorialArrow} aria-hidden>
-                          →
-                        </span>
-                      </a>
-                    ))}
+                    {advertorialLinks.map((link) => {
+                      const Icon = link.Icon;
+                      return (
+                        <a
+                          key={link.href}
+                          href={link.href}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={styles.advertorialLink}
+                        >
+                          <span className={styles.advertorialLabel}>
+                            <span
+                              className={styles.advertorialIconWrap}
+                              aria-hidden
+                            >
+                              <Icon className={styles.advertorialIcon} />
+                            </span>
+                            <span>{link.label}</span>
+                          </span>
+                          <span className={styles.advertorialArrow} aria-hidden>
+                            →
+                          </span>
+                        </a>
+                      );
+                    })}
                   </div>
                 </div>
               </div>
@@ -378,11 +412,14 @@ export default function SpinalisCaseStudy() {
                     </ul>
                   </div>
                 </div>
-
-                <MediaFrame
-                  src="/spinalis-email/general-content.png"
-                  alt="Email template placeholder"
-                />
+                <div>
+                  <h3 className={styles.advertorialLinksTitle}>Example</h3>
+                  <img
+                    src="/spinalis-email/general-content.png"
+                    alt="Email template placeholder"
+                    width="100%"
+                  />
+                </div>
               </div>
             </section>
 
@@ -421,7 +458,7 @@ export default function SpinalisCaseStudy() {
                 ))}
               </div>
               <a
-                href="https://drive.google.com/drive/folders/REPLACE_WITH_FOLDER_ID"
+                href="https://drive.google.com/drive/folders/1XA-QiFkwAPro3OfcOrIVhsH2kvQQ6C4W?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.driveButton}
@@ -442,7 +479,7 @@ export default function SpinalisCaseStudy() {
                 ))}
               </div>
               <a
-                href="https://drive.google.com/drive/folders/REPLACE_WITH_FOLDER_ID"
+                href="https://drive.google.com/drive/folders/1XA-QiFkwAPro3OfcOrIVhsH2kvQQ6C4W?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.driveButton}

@@ -45,6 +45,13 @@ export default function Projects() {
       slug: "other-projects/cow-ad",
     },
     {
+      title: "Spinalis Internship",
+      category: ["ux", "web", "graphic"],
+      wide: true,
+      image: "/spinalis-email/corporate-page.png",
+      slug: "spinalis",
+    },
+    {
       title: "Forest Guardian",
       category: "graphic",
       image: "/project-mockup/lotus-mockup.png",
@@ -67,13 +74,6 @@ export default function Projects() {
       category: ["ux", "web"],
       image: "/case-study/lenditout/lenditout-phones.png",
       slug: "lenditout",
-    },
-    {
-      title: "Spinalis Internship",
-      category: ["ux", "web", "graphic"],
-      wide: true,
-      image: "/project-mockup/eAdvert-mockup.png",
-      slug: "spinalis",
     },
   ];
 
