@@ -463,11 +463,49 @@
 .reflectionCard {
   display: grid;
   gap: 1rem;
-  background: rgba(59, 53, 42, 0.05);
-  border: 1px solid rgba(59, 53, 42, 0.08);
-  border-radius: 1.5rem;
-  padding: 1.5rem;
+  width: min(92vw, 60rem);
+  box-sizing: border-box;
+  background: transparent;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
   line-height: 1.9;
+}
+
+.reflectionCard p {
+  margin: 0;
+  word-wrap: break-word;
+}
+
+.reflectionText {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.reflectionInner {
+  display: grid;
+  grid-template-columns: 1fr 18rem;
+  gap: 1.5rem;
+  align-items: start;
+}
+
+.reflectionText p {
+  max-width: 65ch;
+}
+
+.reflectionAside img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0.75rem;
+  object-fit: cover;
+}
+
+.reflectionAsideCaption {
+  font-size: 0.8rem;
+  color: rgba(59, 53, 42, 0.6);
+  margin-top: 0.6rem;
 }
 
 @media (max-width: 1024px) {
@@ -501,7 +539,8 @@
   .galleryRow,
   .emailGrid,
   .flowBlock,
-  .masonryGrid {
+  .masonryGrid,
+  .reflectionInner {
     width: min(100%, 72rem);
   }
 }

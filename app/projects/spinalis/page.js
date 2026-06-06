@@ -344,36 +344,6 @@ export default function SpinalisCaseStudy() {
                   alt="Email template placeholder"
                 />
               </div>
-
-              <div className={styles.flowBlock}>
-                <h3 className={styles.subheading}>Lifecycle Flow</h3>
-                <div
-                  className={styles.flowDiagram}
-                  aria-label="Email flow diagram"
-                >
-                  {flowSteps.map((step, index) => (
-                    <Fragment key={step}>
-                      <div className={styles.flowStep}>
-                        <span className={styles.flowIndex}>
-                          {String(index + 1).padStart(2, "0")}
-                        </span>
-                        <span>{step}</span>
-                      </div>
-                      {index < flowSteps.length - 1 ? (
-                        <span className={styles.flowArrow} aria-hidden="true">
-                          →
-                        </span>
-                      ) : null}
-                    </Fragment>
-                  ))}
-                </div>
-              </div>
-
-              <div className={styles.emailGrid}>
-                {emailGallery.map((image) => (
-                  <MediaFrame key={image.alt} src={image.src} alt={image.alt} />
-                ))}
-              </div>
             </section>
 
             <section id="section-03" className={styles.section} data-reveal>
@@ -410,6 +380,14 @@ export default function SpinalisCaseStudy() {
                   <MediaFrame key={image.alt} src={image.src} alt={image.alt} />
                 ))}
               </div>
+              <a
+                href="https://drive.google.com/drive/folders/REPLACE_WITH_FOLDER_ID"
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.driveButton}
+              >
+                View Assets
+              </a>
             </section>
 
             <section id="section-04" className={styles.section} data-reveal>
@@ -429,7 +407,7 @@ export default function SpinalisCaseStudy() {
                 rel="noopener noreferrer"
                 className={styles.driveButton}
               >
-                View Full Internship Portfolio
+                View Assets
               </a>
             </section>
 
@@ -453,26 +431,44 @@ export default function SpinalisCaseStudy() {
                 description="A professional summary of what I learned and how the internship shaped my growth."
               />
               <div className={styles.reflectionCard}>
-                <p>
-                  My internship at Spinalis strengthened the way I approach both
-                  design and development. I learned how to work more
-                  deliberately with spacing, hierarchy, and brand consistency so
-                  that each piece could support a clear goal without feeling
-                  crowded or disconnected.
-                </p>
-                <p>
-                  On the technical side, I became more confident making
-                  front-end adjustments that respected an existing system while
-                  still improving the experience. On the design side, I gained a
-                  better understanding of how marketing assets need to adapt
-                  across formats while staying recognizable and accessible.
-                </p>
-                <p>
-                  Overall, the experience helped me grow as a more versatile
-                  designer and developer. It showed me how to move between
-                  creative and technical work with more structure, stronger
-                  communication, and a clearer focus on outcomes.
-                </p>
+                <div className={styles.reflectionInner}>
+                  <div className={styles.reflectionText}>
+                    <p>
+                      My internship at Spinalis strengthened the way I
+                      approach both design and development. I learned how to
+                      work more deliberately with spacing, hierarchy, and
+                      brand consistency so that each piece could support a
+                      clear goal without feeling crowded or disconnected.
+                    </p>
+
+                    <p>
+                      On the technical side, I became more confident making
+                      front-end adjustments that respected an existing system
+                      while still improving the experience. On the design
+                      side, I gained a better understanding of how marketing
+                      assets need to adapt across formats while staying
+                      recognizable and accessible.
+                    </p>
+
+                    <p>
+                      Overall, the experience helped me grow as a more
+                      versatile designer and developer. It showed me how to
+                      move between creative and technical work with more
+                      structure, stronger communication, and a clearer focus
+                      on outcomes.
+                    </p>
+                  </div>
+
+                  <aside className={styles.reflectionAside} aria-hidden>
+                    <img
+                      src="/project-mockup/painting.png"
+                      alt="Selected work snapshot"
+                    />
+                    <p className={styles.reflectionAsideCaption}>
+                      Selected work snapshot
+                    </p>
+                  </aside>
+                </div>
               </div>
             </section>
           </div>
