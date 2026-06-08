@@ -7,7 +7,7 @@ const defaultBody =
   "Gott was created to help neurodiverse electrical apprentices in British Columbia who often find traditional manuals overwhelming. For students with Dyslexia, ADHD, or Autism Spectrum Disorder, complex technical materials can make learning frustrating and stressful.";
 const defaultEyebrow = "Got It, an AI Powered Study Tool";
 const defaultTitle = "This Is What Studying Looks Like With AI";
-const defaultButtonText = "Try It Now!";
+const defaultButtonText = "View Case Study";
 const defaultHref = "/projects";
 const defaultImage = "/case-study/got-it/gotit-laptop.png";
 

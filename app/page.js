@@ -133,9 +133,18 @@ export default function Home() {
               eyebrow="GOT IT"
               title="AI Powered Study Tool"
               body="A web platform designed for electrical apprentices to upload manuals and class materials, then turn dense technical content into simplified summaries and visual mind maps for easier studying."
-              buttonText="Try It Now!"
+              buttonText="View Case Study"
               href="/projects/got-it"
               image="/project-mockup/gotit-brochure.jpg"
+            />
+            <FeatureCard
+              eyebrow="Marketing & content creation"
+              title="SpinaliS Internship"
+              body="Designed social media content, marketing emails, and web experiences that strengthened brand presence and supported customer engagement through thoughtful, user-centered design."
+              buttonText="View Case Study"
+              href="/projects/spinalis"
+              image="/spinalis-email/corporate-page.png"
+              flipped={true}
             />
             <FeatureCard
               eyebrow="LENDITOUT"
@@ -144,15 +153,6 @@ export default function Home() {
               buttonText="View Case Study"
               href="/projects/lenditout"
               image="/case-study/lenditout/lenditout-phones.png"
-              flipped={true}
-            />
-            <FeatureCard
-              eyebrow="RPS"
-              title="Rock Paper Scissors Game"
-              body="An interactive underwater Rock, Paper, Scissors game built to demonstrate core JavaScript concepts such as conditional logic, random outcomes, score tracking, and dynamic UI feedback."
-              buttonText="View Case Study"
-              href="/projects/rps"
-              image="/case-study/rps/main-game.png"
             />
           </div>
           <div className={styles.featuredFooter}>
